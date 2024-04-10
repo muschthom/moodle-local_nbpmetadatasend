@@ -40,26 +40,26 @@ if (!defined('MOODLE_INTERNAL')) {
  * Represents a scheduled task for deleting Possehl users.
  * Extends the core\task\scheduled_task class.
  */
-class putdata_cron extends \core\task\scheduled_task
+class getdata_cron extends \core\task\scheduled_task
 {
 
     public function get_name()
     {
-        return get_string('put_data_cron', 'local_nbpmetadatasend');
+        return get_string('get_data_cron', 'local_nbpmetadatasend');
     }
 
 
 
     public function execute()
     {
-        start_putdata_process();
+        start_getdata_process();
     }
 }
 
 
-function start_putdata_process()
+function start_getdata_process()
 {
-    echo "start_putdata_process";
+    echo "start_getdata_process";
     $baseurl = get_baseurl();
     //echo "baseurl = " . $baseurl;
 
@@ -81,45 +81,33 @@ function start_putdata_process()
     $tokenfile = "token_info.json";
 
     $token = get_nbp_token($tokenfile, $clientid, $clientsecret);
-
-    // Beispielverwendung
-    //echo "<br/>token = " . $token . "<br/>";
-
     $results = get_course_metadata($courseIds);
-
-    //echo "<br/> results : ";
-    //var_dump($results);
-
-    //echo "<br/>convert_moochub_to_amb<br/> ";
-    $jsonData = convert_moochub_to_amb($results);
     foreach ($results as $result) {
         $courseid = isset($result->uuid);
         $url = $baseurl . '/api/course/' . $sourceslug . '/' . $courseid;
+        $curl = curl_init($url);
 
+        // cURL-Optionen festlegen
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // Antwort als String zurückgeben
+        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // Redirects folgen
+        curl_setopt($curl, CURLOPT_HTTPGET, true); // HTTP GET verwenden
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-        curl_setopt(
-            $ch,
-            CURLOPT_HTTPHEADER,
-            array(
-                "accept: text/plain",
-                "Authorization: Bearer " . $token,
-                "Content-Type: application/json",
-            )
-        );
+        // Header festlegen, einschließlich des Authorization-Headers
+        $headers = [
+            'accept: application/json',
+            'Authorization: Bearer ' . $token,
+        ];
+        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-        $response = curl_exec($ch);
-        $err = curl_error($ch);
+        // Die Anfrage ausführen
+        $response = curl_exec($curl);
+        $err = curl_error($curl);
 
         // Status-Code ermitteln
-        $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
         // cURL-Session schließen
-        curl_close($ch);
+        curl_close($curl);
 
         // Auf Fehler überprüfen und Antwort verarbeiten
         if ($err) {

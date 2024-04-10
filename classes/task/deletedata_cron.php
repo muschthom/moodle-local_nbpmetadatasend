@@ -40,26 +40,26 @@ if (!defined('MOODLE_INTERNAL')) {
  * Represents a scheduled task for deleting Possehl users.
  * Extends the core\task\scheduled_task class.
  */
-class putdata_cron extends \core\task\scheduled_task
+class deletedata_cron extends \core\task\scheduled_task
 {
 
     public function get_name()
     {
-        return get_string('put_data_cron', 'local_nbpmetadatasend');
+        return get_string('delete_data_cron', 'local_nbpmetadatasend');
     }
 
 
 
     public function execute()
     {
-        start_putdata_process();
+        start_delete_process();
     }
 }
 
 
-function start_putdata_process()
+function start_delete_process()
 {
-    echo "start_putdata_process";
+    echo "start_deletedata_process";
     $baseurl = get_baseurl();
     //echo "baseurl = " . $baseurl;
 
@@ -81,34 +81,25 @@ function start_putdata_process()
     $tokenfile = "token_info.json";
 
     $token = get_nbp_token($tokenfile, $clientid, $clientsecret);
-
-    // Beispielverwendung
-    //echo "<br/>token = " . $token . "<br/>";
-
     $results = get_course_metadata($courseIds);
-
-    //echo "<br/> results : ";
-    //var_dump($results);
-
-    //echo "<br/>convert_moochub_to_amb<br/> ";
-    $jsonData = convert_moochub_to_amb($results);
     foreach ($results as $result) {
         $courseid = isset($result->uuid);
         $url = $baseurl . '/api/course/' . $sourceslug . '/' . $courseid;
 
-
         $ch = curl_init();
+
+        // Für den DELETE-Request entfernen wir die Zeilen, die den Body betreffen, da dieser typischerweise nicht benötigt wird
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE"); // Ändere den Request-Typ zu DELETE
+        // Entferne CURLOPT_POSTFIELDS, da wir keinen Body für DELETE senden
+
         curl_setopt(
             $ch,
             CURLOPT_HTTPHEADER,
             array(
                 "accept: text/plain",
-                "Authorization: Bearer " . $token,
-                "Content-Type: application/json",
+                "Authorization: Bearer " . $token, // Nutze das Bearer-Token für die Autorisierung
             )
         );
 

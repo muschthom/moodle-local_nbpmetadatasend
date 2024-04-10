@@ -33,4 +33,18 @@ $tasks = [
         'day' => '*',
         'disabled' => 1,
     ],
+    [
+        'classname' => 'local_nbpmetadatasend\task\getdata_cron',
+        'blocking' => 0,
+        'hour' => '1',
+        'day' => '*',
+        'disabled' => 1,
+    ],
+    [
+        'classname' => 'local_nbpmetadatasend\task\deletedata_cron',
+        'blocking' => 0,
+        'hour' => '1',
+        'day' => '*',
+        'disabled' => 1,
+    ],
 ];

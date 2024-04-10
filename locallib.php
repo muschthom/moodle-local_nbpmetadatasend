@@ -47,13 +47,16 @@ function get_course_metadata($courseids)
         // Die Abfrage durchführen
         $results = $DB->get_records_sql($sql, array('courseid' => $courseid));
 
+        /*
         // Ergebnisse verarbeiten
         foreach ($results as $result) {
             // Mach etwas mit jedem Ergebnis
             echo "coursetitle = " . $result->coursetitle . '<br>'; // Oder jede andere Spalte in deiner Tabelle
             echo "lecturer = " . $result->lecturer . '<br>'; // Oder jede andere Spalte in deiner Tabelle
             echo "teasertext = " . $result->teasertext . '<br>'; // Oder jede andere Spalte in deiner Tabelle
+       
         }
+         */
     }
     return $results;
 }
@@ -61,30 +64,32 @@ function get_course_metadata($courseids)
 
 function convert_moochub_to_amb($results)
 {
-    $courseAttributes = $results['data'][0]['attributes'];
-
-    foreach ($courseAttributes as $result) {
+    //$courseAttributes = $results['data'][0]['attributes'];
+    $convertedResults = [];
+    foreach ($results as $result) {
         $convertedResults[] = [
             'title' => $result->coursetitle, // oder der entsprechende Spaltenname
-            'description' => $result->coursedescription, // oder der entsprechende Spaltenname
-            'uri' => $result->courseurl, // oder der entsprechende Spaltenname
+            'description' => $result->teasertext, // oder der entsprechende Spaltenname
+            //'uri' => $result->courseurl, // oder der entsprechende Spaltenname
+            //TODO: ändern
+            'uri' => "http://localhost/course/view.php?id=" . (isset($result->courseid) ? $result->courseid : ''),
             'cost' => isset($result->coursecost) ? (float)$result->coursecost : 0, // Annahme: coursecost ist der Feldname für die Kosten
+            'uuid' => $result->uuid, 
         ];
+        //$jsonData .= $jsonData . json_encode($convertedResults);
     }
+    $jsonData = json_encode($convertedResults);
+    $jsonDataFinal = str_replace(['[', ']'], '', $jsonData);
+    echo "jsondata = " . $jsonDataFinal;
 
-    foreach ($convertedResults as $courseData) {
-        echo "Titel: " . $courseData['title'] . "<br>";
-        echo "Beschreibung: " . $courseData['description'] . "<br>";
-        echo "URI: " . $courseData['uri'] . "<br>";
-        echo "Kosten: " . $courseData['cost'] . "<br><br>";
-    }
+    return $jsonDataFinal;
 }
 
 function put_data_to_nbp($data, $baseUrl, $sourceSlug, $courseId, $tokenFile, $clientId, $clientSecret)
 {
     $url = $baseUrl . '/api/course/' . $sourceSlug . '/' . $courseId;
     require_once "get-bearer-token.php";
-    $token = get_token($tokenFile, $clientId, $clientSecret);
+    $token = get_nbp_token($tokenFile, $clientId, $clientSecret);
 }
 
 
@@ -205,7 +210,7 @@ function get_new_token($tokenFile, $clientId, $clientSecret)
     curl_close($curl);
 }
 
-function get_token($tokenFile, $clientId, $clientSecret)
+function get_nbp_token($tokenFile, $clientId, $clientSecret)
 {
 
     if (!file_exists($tokenFile)) {
