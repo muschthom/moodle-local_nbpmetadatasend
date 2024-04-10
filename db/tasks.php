@@ -25,7 +25,12 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2024040902; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2020041200; // Requires this Moodle version.
-$plugin->component = 'local_nbpmetadatasend'; // Full name of the plugin (used for diagnostics)
-
+$tasks = [
+    [
+        'classname' => 'local_nbpmetadatasend\task\putdata_cron',
+        'blocking' => 0,
+        'hour' => '1',
+        'day' => '*',
+        'disabled' => 1,
+    ],
+];

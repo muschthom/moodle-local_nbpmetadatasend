@@ -15,17 +15,12 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Plugin version info
+ * Strings for component 'local_importpossehluser', language 'en', branch 'MOODLE_22_STABLE'
  *
  * @package    local
  * @subpackage nbpmetadatasend
  * @copyright   2023 ILD TH Lübeck <dev.ild@th-luebeck.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
-defined('MOODLE_INTERNAL') || die();
-
-$plugin->version   = 2024040902; // The current plugin version (Date: YYYYMMDDXX).
-$plugin->requires  = 2020041200; // Requires this Moodle version.
-$plugin->component = 'local_nbpmetadatasend'; // Full name of the plugin (used for diagnostics)
-
+$string['pluginname'] = 'nbp meta data send';
+$string['put_data_cron'] = 'Put Data to NBP Cron';
