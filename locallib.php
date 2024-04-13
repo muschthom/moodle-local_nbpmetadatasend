@@ -35,17 +35,18 @@ function get_course_metadata($courseids)
 {
     // Umwandeln des Strings in ein Array
     $courseidsArray = explode(",", $courseids);
-
+    echo "vardump courseidArray: "; 
+    var_dump($courseidsArray); 
     // Stelle sicher, dass diese Datei Teil von Moodle ist
     global $DB;
-
+    $results = []; 
     foreach ($courseidsArray as $courseid) {
 
         // SQL-Abfrage vorbereiten
         $sql = "SELECT * FROM {ildmeta} WHERE courseid = :courseid";
 
         // Die Abfrage durchführen
-        $results = $DB->get_records_sql($sql, array('courseid' => $courseid));
+        $results[] = $DB->get_records_sql($sql, array('courseid' => $courseid));
 
         /*
         // Ergebnisse verarbeiten
@@ -64,6 +65,9 @@ function get_course_metadata($courseids)
 
 function convert_moochub_to_amb($results)
 {
+    //require_once(__DIR__ . '/../../config.php');
+
+    global $CFG;
     //$courseAttributes = $results['data'][0]['attributes'];
     $convertedResults = [];
     foreach ($results as $result) {
@@ -71,26 +75,21 @@ function convert_moochub_to_amb($results)
             'title' => $result->coursetitle, // oder der entsprechende Spaltenname
             'description' => $result->teasertext, // oder der entsprechende Spaltenname
             //'uri' => $result->courseurl, // oder der entsprechende Spaltenname
-            //TODO: ändern
-            'uri' => "http://localhost/course/view.php?id=" . (isset($result->courseid) ? $result->courseid : ''),
+
+
+            'uri' => $CFG->wwwroot . "/course/view.php?id=" . (isset($result->courseid) ? $result->courseid : ''),
             'cost' => isset($result->coursecost) ? (float)$result->coursecost : 0, // Annahme: coursecost ist der Feldname für die Kosten
-            'uuid' => $result->uuid, 
+            'uuid' => $result->uuid,
         ];
         //$jsonData .= $jsonData . json_encode($convertedResults);
     }
     $jsonData = json_encode($convertedResults);
     $jsonDataFinal = str_replace(['[', ']'], '', $jsonData);
-    echo "jsondata = " . $jsonDataFinal;
+    //echo "jsondata = " . $jsonDataFinal;
 
     return $jsonDataFinal;
 }
 
-function put_data_to_nbp($data, $baseUrl, $sourceSlug, $courseId, $tokenFile, $clientId, $clientSecret)
-{
-    $url = $baseUrl . '/api/course/' . $sourceSlug . '/' . $courseId;
-    require_once "get-bearer-token.php";
-    $token = get_nbp_token($tokenFile, $clientId, $clientSecret);
-}
 
 
 function get_course_ids()

@@ -75,9 +75,6 @@ function start_putdata_process()
     $courseIds = get_courseIds();
     //echo "courseIds = " . $courseIds;
 
-    $metadata = get_course_metadata($courseIds);
-    //var_dump($metadata);
-
     $tokenfile = "token_info.json";
 
     $token = get_nbp_token($tokenfile, $clientid, $clientsecret);
@@ -87,15 +84,25 @@ function start_putdata_process()
 
     $results = get_course_metadata($courseIds);
 
-    //echo "<br/> results : ";
-    //var_dump($results);
+    echo "<br/> results : ";
+    var_dump($results);
 
     //echo "<br/>convert_moochub_to_amb<br/> ";
-    $jsonData = convert_moochub_to_amb($results);
     foreach ($results as $result) {
-        $courseid = isset($result->uuid);
-        $url = $baseurl . '/api/course/' . $sourceslug . '/' . $courseid;
+        echo "putdata_cron var_dump(result) = ";
+        var_dump($result);
 
+
+        $jsonData = convert_moochub_to_amb($result);
+        echo "jsonData = " . $jsonData;
+
+        $dataArray = json_decode($jsonData, true);
+
+        // Zugriff auf die UUID
+        $uuid = $dataArray['uuid'];
+        echo "Die UUID ist: " . $uuid;
+
+        $url = $baseurl . '/api/course/' . $sourceslug . '/' . $uuid;
 
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
