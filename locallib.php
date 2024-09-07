@@ -31,33 +31,106 @@ require_once(__DIR__ . '/../../config.php');
  *
  * @return mysqli_result|bool The result of the database query or false if there is no connection.
  */
-function get_course_metadata($courseids)
+function get_course_isymetadata($courseids)
 {
-    // Umwandeln des Strings in ein Array
-    $courseidsArray = explode(",", $courseids);
-    echo "vardump courseidArray: "; 
-    var_dump($courseidsArray); 
-    // Stelle sicher, dass diese Datei Teil von Moodle ist
     global $DB;
-    $results = []; 
-    foreach ($courseidsArray as $courseid) {
+    $results = [];
+
+
+    foreach ($courseids as $courseid) {
+
+        // Trim leere Zeichen und prüfe, ob der courseid eine gültige Ganzzahl ist
+        $courseid = trim($courseid);
+
+        // Prüfen, ob courseid nur aus Ziffern besteht und positiv ist
+        if (!ctype_digit($courseid) || (int)$courseid <= 0) {
+            // Wenn ungültig, überspringe diesen Wert
+            continue;
+        }
+
 
         // SQL-Abfrage vorbereiten
         $sql = "SELECT * FROM {ildmeta} WHERE courseid = :courseid";
 
         // Die Abfrage durchführen
-        $results[] = $DB->get_records_sql($sql, array('courseid' => $courseid));
+        $results[] = $DB->get_record_sql($sql, array('courseid' => $courseid));
+    }
+    return $results;
+}
 
-        /*
-        // Ergebnisse verarbeiten
-        foreach ($results as $result) {
-            // Mach etwas mit jedem Ergebnis
-            echo "coursetitle = " . $result->coursetitle . '<br>'; // Oder jede andere Spalte in deiner Tabelle
-            echo "lecturer = " . $result->lecturer . '<br>'; // Oder jede andere Spalte in deiner Tabelle
-            echo "teasertext = " . $result->teasertext . '<br>'; // Oder jede andere Spalte in deiner Tabelle
-       
+
+function get_competency_description($compID, $jsonFilePath) {
+    // Prüfen, ob compID "GRETA" enthält
+    if (strpos($compID, 'GRETA') !== false) {
+        // JSON-Datei laden
+        $jsonData = file_get_contents($jsonFilePath);
+        if ($jsonData === false) {
+            die("Error loading JSON file.");
         }
-         */
+        
+        // JSON-Daten in ein assoziatives Array konvertieren
+        $competencyModel = json_decode($jsonData, true);
+        
+        if ($competencyModel === null) {
+            die("Error decoding JSON.");
+        }
+
+        // compID zerlegen in GRETA, Aspect, Area, Facet, Requirement
+        $parts = explode('-', $compID);
+        
+        // Prüfen, ob die compID die richtige Struktur hat (GRETA-Aspect-Area-Facet-Requirement)
+        if (count($parts) === 5) {
+            $aspectIndex = (int)$parts[1] - 1;    // Kompetenzaspekt (1-basiert)
+            $areaIndex = (int)$parts[2] - 1;      // Kompetenzbereich (1-basiert)
+            $facetIndex = (int)$parts[3] - 1;     // Kompetenzfacette (1-basiert)
+            $requirementIndex = (int)$parts[4] - 1; // Kompetenzanforderung (1-basiert)
+
+            // Zugriff auf die gewünschte Beschreibung
+            if (isset($competencyModel['Kompetenzmodell']['Kompetenzaspekte'][$aspectIndex]['Kompetenzbereiche'][$areaIndex]['Kompetenzfacetten'][$facetIndex]['Kompetenzanforderungen'][$requirementIndex])) {
+                $description = $competencyModel['Kompetenzmodell']['Kompetenzaspekte'][$aspectIndex]['Kompetenzbereiche'][$areaIndex]['Kompetenzfacetten'][$facetIndex]['Kompetenzanforderungen'][$requirementIndex];
+                return $description;
+            } else {
+                return "Beschreibung nicht gefunden.";
+            }
+        } else {
+            return "Ungültige compID-Struktur.";
+        }
+    }
+    
+    return "compID enthält nicht 'GRETA'.";
+}
+
+
+function get_course_competencydata($courseids)
+{
+    global $DB;
+    $results = [];
+
+
+    foreach ($courseids as $courseid) {
+        // SQL-Abfrage vorbereiten
+        $sql = "SELECT competency.idnumber
+                FROM {competency_coursecomp} coursecomp
+                LEFT JOIN {competency} competency ON coursecomp.competencyid = competency.id
+                LEFT JOIN {competency_framework} framework ON competency.competencyframeworkid = framework.id
+                WHERE coursecomp.courseid = :courseid AND framework.shortname IN ('ESCO', 'GRETA', 'DigComp')";
+
+
+        // Die Abfrage durchführen
+        $recordset = $DB->get_recordset_sql($sql, array('courseid' => $courseid));
+
+        // Initialisiere ein Array, um die Competency-IDs für diesen Kurs zu speichern
+        $competency_ids = [];
+
+        foreach ($recordset as $record) {
+            $competency_ids[] = $record->idnumber; // Füge die idnumber der Kompetenz hinzu
+        }
+
+        // Schließe den Recordset nach dem Durchlaufen
+        $recordset->close();
+
+        // Füge das Ergebnis für diesen Kurs dem results-Array hinzu
+        $results[$courseid] = $competency_ids;
     }
     return $results;
 }
@@ -167,7 +240,29 @@ function get_courseIds()
         echo ("No connection to database. ");
         die();
     }
-    return $courseIds;
+    $courseidsArray = [];
+    // Umwandeln des Strings in ein Array
+    if (strpos($courseIds, ',') !== false) {
+        $courseidsArray = explode(",", $courseIds);
+    } else {
+        $courseidsArray = [$courseIds];
+    }
+
+    $final_courseidsArray = [];
+    foreach ($courseidsArray as $courseid) {
+
+        // Trim leere Zeichen und prüfe, ob der courseid eine gültige Ganzzahl ist
+        $courseid = trim($courseid);
+
+        // Prüfen, ob courseid nur aus Ziffern besteht und positiv ist
+        if (!ctype_digit($courseid) || (int)$courseid <= 0) {
+            // Wenn ungültig, überspringe diesen Wert
+            continue;
+        }
+        $final_courseidsArray[] = $courseid;
+    }
+
+    return $final_courseidsArray;
 }
 
 
@@ -213,6 +308,7 @@ function get_nbp_token($tokenFile, $clientId, $clientSecret)
 {
 
     if (!file_exists($tokenFile)) {
+        echo "no token file";
         get_new_token($tokenFile, $clientId, $clientSecret);
     }
 

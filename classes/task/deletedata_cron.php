@@ -74,9 +74,9 @@ function start_delete_process()
 
     $courseIds = get_courseIds();
     //echo "courseIds = " . $courseIds;
+    //$courseIds = ["a5d2ce26-8783-4d6d-880c-ee291d5c24c3"];
 
-    $metadata = get_course_metadata($courseIds);
-    //var_dump($metadata);
+
 
     $tokenfile = "token_info.json";
 

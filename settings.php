@@ -126,10 +126,10 @@ if ($hassiteconfig) {
 		'Course Ids',
 
 		// This is helper text for this config field
-		'Ids der Kurse, deren Metadaten an den Datenraum gesendet werden sollen',
+		'Ids der Kurse, deren Metadaten an den Datenraum gesendet werden sollen. Format "KursID","KursID",... z.B. 1,2,3',
 
 		// This is the default value
-		'',
+		'1,2,5',
 
 		// This is the type of Parameter this config is
 		PARAM_TEXT

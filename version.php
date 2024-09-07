@@ -29,3 +29,6 @@ $plugin->version   = 2024040905; // The current plugin version (Date: YYYYMMDDXX
 $plugin->requires  = 2020041200; // Requires this Moodle version.
 $plugin->component = 'local_nbpmetadatasend'; // Full name of the plugin (used for diagnostics)
 
+$plugin->dependencies = array(
+    'local_ildmeta' => 2022110800         // Abhängigkeit von mod_forum ab Version 2022110800
+);

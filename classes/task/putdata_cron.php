@@ -84,56 +84,55 @@ function start_putdata_process()
 
     $results = get_course_metadata($courseIds);
 
-    echo "<br/> results : ";
-    var_dump($results);
-
     //echo "<br/>convert_moochub_to_amb<br/> ";
     foreach ($results as $result) {
-        echo "putdata_cron var_dump(result) = ";
-        var_dump($result);
+        foreach ($result as $object) {
 
+            if (isset($object->uuid)) {
+                $uuid = $object->uuid;
+                $jsonData = json_encode($object);
+                echo "put jsonData = " . $jsonData;
 
-        $jsonData = convert_moochub_to_amb($result);
-        echo "jsonData = " . $jsonData;
+                $dataArray = json_decode($jsonData, true);
 
-        $dataArray = json_decode($jsonData, true);
+                // Zugriff auf die UUID
+                //$uuid = $dataArray['uuid'];
+                echo "Die UUID ist: " . $uuid;
 
-        // Zugriff auf die UUID
-        $uuid = $dataArray['uuid'];
-        echo "Die UUID ist: " . $uuid;
+                $url = $baseurl . '/api/course-v2/' . $sourceslug . '/' . $uuid;
 
-        $url = $baseurl . '/api/course/' . $sourceslug . '/' . $uuid;
+                $ch = curl_init();
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+                curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+                curl_setopt(
+                    $ch,
+                    CURLOPT_HTTPHEADER,
+                    array(
+                        "accept: text/plain",
+                        "Authorization: Bearer " . $token,
+                        "Content-Type: application/json",
+                    )
+                );
 
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-        curl_setopt(
-            $ch,
-            CURLOPT_HTTPHEADER,
-            array(
-                "accept: text/plain",
-                "Authorization: Bearer " . $token,
-                "Content-Type: application/json",
-            )
-        );
+                $response = curl_exec($ch);
+                $err = curl_error($ch);
 
-        $response = curl_exec($ch);
-        $err = curl_error($ch);
+                // Status-Code ermitteln
+                $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-        // Status-Code ermitteln
-        $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                // cURL-Session schließen
+                curl_close($ch);
 
-        // cURL-Session schließen
-        curl_close($ch);
-
-        // Auf Fehler überprüfen und Antwort verarbeiten
-        if ($err) {
-            echo "cURL Error #: " . $err;
-        } else {
-            echo "HTTP Status Code: " . $http_status . "\n";
-            echo "Response: " . $response;
+                // Auf Fehler überprüfen und Antwort verarbeiten
+                if ($err) {
+                    echo "cURL Error #: " . $err;
+                } else {
+                    echo "HTTP Status Code: " . $http_status . "\n";
+                    echo "Response: " . $response;
+                }
+            }
         }
     }
 }

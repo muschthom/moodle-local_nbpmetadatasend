@@ -79,51 +79,48 @@ function start_getdata_process()
 
     $token = get_nbp_token($tokenfile, $clientid, $clientsecret);
     $results = get_course_metadata($courseIds);
+    //echo "getdata var_dump";
+    //var_dump($results);
     foreach ($results as $result) {
-        //echo "getdata_cron var_dump(result) = ";
-        //var_dump($result);
+        foreach ($result as $object) {
+            // Zugriff auf die UUID
+            if (isset($object->uuid)) {
+                $uuid = $object->uuid;
+                echo "Die UUID ist: " . $uuid;
 
+                $url = $baseurl . '/api/course/' . $sourceslug . '/' . $uuid;
+                $curl = curl_init($url);
 
-        $jsonData = convert_moochub_to_amb($result);
-        //echo "jsonData = " . $jsonData;
+                // cURL-Optionen festlegen
+                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // Antwort als String zurückgeben
+                curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // Redirects folgen
+                curl_setopt($curl, CURLOPT_HTTPGET, true); // HTTP GET verwenden
 
-        $dataArray = json_decode($jsonData, true);
+                // Header festlegen, einschließlich des Authorization-Headers
+                $headers = [
+                    'accept: application/json',
+                    'Authorization: Bearer ' . $token,
+                ];
+                curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-        // Zugriff auf die UUID
-        $uuid = $dataArray['uuid'];
-        //echo "Die UUID ist: " . $uuid;
+                // Die Anfrage ausführen
+                $response = curl_exec($curl);
+                $err = curl_error($curl);
 
-        $url = $baseurl . '/api/course/' . $sourceslug . '/' . $uuid;
-        $curl = curl_init($url);
+                // Status-Code ermitteln
+                $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-        // cURL-Optionen festlegen
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true); // Antwort als String zurückgeben
-        curl_setopt($curl, CURLOPT_FOLLOWLOCATION, true); // Redirects folgen
-        curl_setopt($curl, CURLOPT_HTTPGET, true); // HTTP GET verwenden
+                // cURL-Session schließen
+                curl_close($curl);
 
-        // Header festlegen, einschließlich des Authorization-Headers
-        $headers = [
-            'accept: application/json',
-            'Authorization: Bearer ' . $token,
-        ];
-        curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-
-        // Die Anfrage ausführen
-        $response = curl_exec($curl);
-        $err = curl_error($curl);
-
-        // Status-Code ermitteln
-        $http_status = curl_getinfo($curl, CURLINFO_HTTP_CODE);
-
-        // cURL-Session schließen
-        curl_close($curl);
-
-        // Auf Fehler überprüfen und Antwort verarbeiten
-        if ($err) {
-            echo "cURL Error #: " . $err;
-        } else {
-            echo "HTTP Status Code: " . $http_status . "\n";
-            echo "Response: " . $response;
+                // Auf Fehler überprüfen und Antwort verarbeiten
+                if ($err) {
+                    echo "cURL Error #: " . $err;
+                } else {
+                    echo "HTTP Status Code: " . $http_status . "\n";
+                    echo "Response: " . $response;
+                }
+            }
         }
     }
 }
