@@ -1,9 +1,9 @@
 <?php
 
-
-
-// test to echo all required data to http://localhost/local/nbpmetadatasend/get_course_data.php
 require_once(__DIR__ . '/../../config.php');
+
+global $CFG; 
+// test to echo all required data to http://localhost/local/nbpmetadatasend/get_course_data.php
 $systemUrl = $CFG->wwwroot;
 $url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';
 // Beispielnutzung der Funktion

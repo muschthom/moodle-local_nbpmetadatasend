@@ -40,25 +40,21 @@ if (!defined('MOODLE_INTERNAL')) {
  * Represents a scheduled task for deleting Possehl users.
  * Extends the core\task\scheduled_task class.
  */
-class putdata_cron extends \core\task\scheduled_task
-{
+class putdata_cron extends \core\task\scheduled_task {
 
-    public function get_name()
-    {
+    public function get_name() {
         return get_string('put_data_cron', 'local_nbpmetadatasend');
     }
 
 
 
-    public function execute()
-    {
+    public function execute() {
         start_putdata_process();
     }
 }
 
 
-function start_putdata_process()
-{
+function start_putdata_process() {
     echo "start_putdata_process";
     $baseurl = get_baseurl();
     //echo "baseurl = " . $baseurl;
@@ -82,10 +78,25 @@ function start_putdata_process()
     // Beispielverwendung
     //echo "<br/>token = " . $token . "<br/>";
 
-    $results = get_course_metadata($courseIds);
+    //$results = get_course_metadata($courseIds);
+    // test to echo all required data to http://localhost/local/nbpmetadatasend/get_course_data.php
+    global $CFG;
+    require_once(__DIR__ . '/../../../../config.php');
+    $systemUrl = $CFG->wwwroot;
+    $url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';
+    // Beispielnutzung der Funktion
+    //require_once($CFG->dirroot . '/local/nbpmetadatasend/locallib.php');
+    $courseIds = get_courseIds();
+    $uuids = get_uuids_by_courseids($courseIds);
 
+    $filteredCourses = getFilteredCoursesData($url, $uuids);
+    if ($filteredCourses) {
+        print_r($filteredCourses); // Gibt die gefilterten Kursdaten aus
+    } else {
+        echo "Es konnten keine gefilterten Kursdaten abgerufen werden.";
+    }
     //echo "<br/>convert_moochub_to_amb<br/> ";
-    foreach ($results as $result) {
+    foreach ($filteredCourses as $result) {
         foreach ($result as $object) {
 
             if (isset($object->uuid)) {

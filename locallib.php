@@ -330,7 +330,8 @@ function getFilteredCoursesData(string $url, array $uuids): ?array {
 
     // Auf die Daten im Schlüssel "data" zugreifen
     $courseData = $dataArray['data'];
-
+    echo "courseData <br/>"; 
+    var_dump($courseData); 
     // Gefilterte Daten basierend auf den UUIDs (entsprechen den "id"-Werten)
     $filteredData = array_filter($courseData, function ($item) use ($uuids) {
         return isset($item['id']) && in_array($item['id'], $uuids, true);
