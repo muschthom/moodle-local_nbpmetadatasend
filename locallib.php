@@ -31,8 +31,7 @@ require_once(__DIR__ . '/../../config.php');
  *
  * @return mysqli_result|bool The result of the database query or false if there is no connection.
  */
-function get_course_isymetadata($courseids)
-{
+function get_course_isymetadata($courseids) {
     global $DB;
     $results = [];
 
@@ -67,17 +66,17 @@ function get_competency_description($compID, $jsonFilePath) {
         if ($jsonData === false) {
             die("Error loading JSON file.");
         }
-        
+
         // JSON-Daten in ein assoziatives Array konvertieren
         $competencyModel = json_decode($jsonData, true);
-        
+
         if ($competencyModel === null) {
             die("Error decoding JSON.");
         }
 
         // compID zerlegen in GRETA, Aspect, Area, Facet, Requirement
         $parts = explode('-', $compID);
-        
+
         // Prüfen, ob die compID die richtige Struktur hat (GRETA-Aspect-Area-Facet-Requirement)
         if (count($parts) === 5) {
             $aspectIndex = (int)$parts[1] - 1;    // Kompetenzaspekt (1-basiert)
@@ -96,13 +95,12 @@ function get_competency_description($compID, $jsonFilePath) {
             return "Ungültige compID-Struktur.";
         }
     }
-    
+
     return "compID enthält nicht 'GRETA'.";
 }
 
 
-function get_course_competencydata($courseids)
-{
+function get_course_competencydata($courseids) {
     global $DB;
     $results = [];
 
@@ -136,8 +134,7 @@ function get_course_competencydata($courseids)
 }
 
 
-function convert_moochub_to_amb($results)
-{
+function convert_moochub_to_amb($results) {
     //require_once(__DIR__ . '/../../config.php');
 
     global $CFG;
@@ -165,8 +162,7 @@ function convert_moochub_to_amb($results)
 
 
 
-function get_course_ids()
-{
+function get_course_ids() {
     global $DB;
     if ($DB->get_records('config')) {
         $tableobj = $DB->get_record('config', ['name' => 'local_importpossehl_tablename']);
@@ -178,8 +174,7 @@ function get_course_ids()
     return $tablename;
 }
 
-function get_baseurl()
-{
+function get_baseurl() {
     global $DB;
     if ($DB->get_records('config')) {
         $baseurlobj = $DB->get_record('config', ['name' => 'local_nbpmetadatasend_baseurl']);
@@ -191,8 +186,7 @@ function get_baseurl()
     return $baseurl;
 }
 
-function get_source_slug()
-{
+function get_source_slug() {
     global $DB;
     if ($DB->get_records('config')) {
         $sourceslugobj = $DB->get_record('config', ['name' => 'local_nbpmetadatasend_sourceSlug']);
@@ -204,8 +198,7 @@ function get_source_slug()
     return $sourceslug;
 }
 
-function get_clientid()
-{
+function get_clientid() {
     global $DB;
     if ($DB->get_records('config')) {
         $clientidobj = $DB->get_record('config', ['name' => 'local_nbpmetadatasend_clientId']);
@@ -217,8 +210,7 @@ function get_clientid()
     return $clientid;
 }
 
-function get_clientsecret()
-{
+function get_clientsecret() {
     global $DB;
     if ($DB->get_records('config')) {
         $clientsecretobj = $DB->get_record('config', ['name' => 'local_nbpmetadatasend_clientSecret']);
@@ -230,8 +222,7 @@ function get_clientsecret()
     return $clientsecret;
 }
 
-function get_courseIds()
-{
+function get_courseIds() {
     global $DB;
     if ($DB->get_records('config')) {
         $courseIdsobj = $DB->get_record('config', ['name' => 'local_nbpmetadatasend_courseIds']);
@@ -261,13 +252,95 @@ function get_courseIds()
         }
         $final_courseidsArray[] = $courseid;
     }
-
+    var_dump($final_courseidsArray); 
     return $final_courseidsArray;
 }
 
+/**
+ * Funktion, um UUIDs basierend auf einer Liste von Course-IDs aus der Tabelle mdl_ildmeta abzurufen.
+ *
+ * @param array $courseids Array der Course-IDs, für die die UUIDs abgerufen werden sollen.
+ * @return array Array mit den gefundenen UUIDs, wobei die Schlüssel die Course-IDs sind.
+ * @throws dml_exception Wenn ein Datenbankfehler auftritt.
+ */
+function get_uuids_by_courseids(array $courseids): array {
+    global $DB; // Zugriff auf die Moodle-Datenbank
 
-function get_new_token($tokenFile, $clientId, $clientSecret)
-{
+    // Prüfen, ob die Eingabe leer ist
+    if (empty($courseids)) {
+        return [];
+    }
+
+    // SQL-Abfrage: UUIDs für die angegebenen Course-IDs abrufen
+    list($in_sql, $params) = $DB->get_in_or_equal($courseids, SQL_PARAMS_NAMED);
+    $sql = "SELECT courseid, uuid 
+            FROM {ildmeta} 
+            WHERE courseid $in_sql";
+
+    // Abfrage ausführen
+    $results = $DB->get_records_sql($sql, $params);
+
+    // Ergebnisse in ein einfaches Array umwandeln
+    $uuids = [];
+    foreach ($results as $record) {
+        $uuids[$record->courseid] = $record->uuid;
+    }
+    var_dump( $uuids); 
+
+    return $uuids;
+}
+
+/**
+ * Funktion, um Kursdaten von einer URL abzurufen und nur die Daten zu filtern,
+ * die die gewünschten UUIDs enthalten.
+ *
+ * @param string $url Die URL, von der die JSON-Daten abgerufen werden.
+ * @param array $uuids Die Liste der UUIDs, die berücksichtigt werden sollen.
+ * @return array|null Gefilterte Kursdaten oder null bei einem Fehler.
+ */
+function getFilteredCoursesData(string $url, array $uuids): ?array {
+    // cURL-Session initialisieren
+    $ch = curl_init();
+
+    // Optionen setzen
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Ausgabe als String zurückgeben
+
+    // Anfrage ausführen und Antwort speichern
+    $jsonData = curl_exec($ch);
+
+    // Prüfen, ob ein Fehler aufgetreten ist
+    if (curl_errno($ch)) {
+        echo "cURL-Fehler: " . curl_error($ch);
+        curl_close($ch);
+        return null;
+    }
+
+    // cURL-Session schließen
+    curl_close($ch);
+
+    // JSON in ein PHP-Array umwandeln
+    $dataArray = json_decode($jsonData, true);
+
+    // Überprüfen, ob das JSON-Parsing erfolgreich war und die Struktur gültig ist
+    if (!is_array($dataArray) || !isset($dataArray['data'])) {
+        echo "Fehler beim Dekodieren der JSON-Daten oder ungültige Datenstruktur.";
+        return null;
+    }
+
+    // Auf die Daten im Schlüssel "data" zugreifen
+    $courseData = $dataArray['data'];
+
+    // Gefilterte Daten basierend auf den UUIDs (entsprechen den "id"-Werten)
+    $filteredData = array_filter($courseData, function ($item) use ($uuids) {
+        return isset($item['id']) && in_array($item['id'], $uuids, true);
+    });
+
+    return array_values($filteredData); // Indexe neu sortieren
+}
+
+
+function get_new_token($tokenFile, $clientId, $clientSecret) {
 
     //TODO: URL anpassen, passt derzeit nicht mit URL aus DB zusammen
     $url = "https://aai.demo.meinbildungsraum.de/realms/nbp-aai/protocol/openid-connect/token";
@@ -304,8 +377,7 @@ function get_new_token($tokenFile, $clientId, $clientSecret)
     curl_close($curl);
 }
 
-function get_nbp_token($tokenFile, $clientId, $clientSecret)
-{
+function get_nbp_token($tokenFile, $clientId, $clientSecret) {
 
     if (!file_exists($tokenFile)) {
         echo "no token file";
