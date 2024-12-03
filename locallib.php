@@ -141,23 +141,79 @@ function convert_moochub_to_amb($results) {
     //$courseAttributes = $results['data'][0]['attributes'];
     $convertedResults = [];
     foreach ($results as $result) {
+        $attributes = $result['attributes'] ?? [];
         $convertedResults[] = [
-            'title' => $result->coursetitle, // oder der entsprechende Spaltenname
-            'description' => $result->teasertext, // oder der entsprechende Spaltenname
+            /*
+            'title' => $result->attributes->name, // oder der entsprechende Spaltenname
+            'description' => $result->attributes->description, // oder der entsprechende Spaltenname
             //'uri' => $result->courseurl, // oder der entsprechende Spaltenname
 
 
-            'uri' => $CFG->wwwroot . "/course/view.php?id=" . (isset($result->courseid) ? $result->courseid : ''),
+            //'courseUrl' => $CFG->wwwroot . "/course/view.php?id=" . (isset($result->courseid) ? $result->courseid : ''),
+            'courseUrl' => $result->attributes->url, 
+            "language" => $result->attributes->inLanguage[0],
             'cost' => isset($result->coursecost) ? (float)$result->coursecost : 0, // Annahme: coursecost ist der Feldname für die Kosten
-            'uuid' => $result->uuid,
+            //'uuid' => $result->uuid,
+            "courseMode" => $result->attributes->courseMode[0],
+            "logoUrl" => $result->attributes->publisher->image->contentUrl
+            */
+            'title' => $attributes['name'] ?? null,
+            'description' => $attributes['description'] ?? null,
+            'courseUrl' => $attributes['url'] ?? null,
+            'language' => $attributes['inLanguage'][0] ?? null,
+            'cost' => $result['coursecost'] ?? 0,
+            'courseMode' => $attributes['courseMode'][0] ?? null,
+            'logoUrl' => $attributes['publisher']['image']['contentUrl'] ?? null,
         ];
         //$jsonData .= $jsonData . json_encode($convertedResults);
     }
     $jsonData = json_encode($convertedResults);
+    echo "jsondata = " . $jsonData;
+
     $jsonDataFinal = str_replace(['[', ']'], '', $jsonData);
-    //echo "jsondata = " . $jsonDataFinal;
+    echo "jsonDataFinal = " . $jsonDataFinal;
 
     return $jsonDataFinal;
+}
+
+function remove_html_from_json($jsonString) {
+    /*
+    // JSON-String in ein assoziatives Array dekodieren
+    $data = json_decode($jsonString, true);
+
+    // Funktion zur rekursiven Entfernung von HTML-Tags
+    function clean_html_recursive($value) {
+        if (is_array($value)) {
+            return array_map('clean_html_recursive', $value);
+        } elseif (is_string($value)) {
+            return strip_tags($value); // Entfernt HTML-Tags
+        }
+        return $value; // Für andere Datentypen unverändert zurückgeben
+    }
+
+    // HTML-Tags aus allen Werten im Array entfernen
+    $cleanedData = clean_html_recursive($data);
+
+    // Das bereinigte Array zurück in einen JSON-String umwandeln
+    return json_encode($cleanedData, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
+    */
+    $data = json_decode($jsonString, true); // JSON in ein Array dekodieren
+
+    // Funktion zur Bereinigung eines Strings
+    function clean_string($value) {
+        // HTML-Tags entfernen und Escapes/Zeilenumbrüche bereinigen
+        return preg_replace('/[\r\n\t]+/', ' ', strip_tags(stripslashes($value)));
+    }
+
+    // HTML-Tags, Zeilenumbrüche und Escapes aus der Beschreibung entfernen
+    if (isset($data['description'])) {
+        $data['description'] = clean_string($data['description']);
+    }
+
+    // Falls andere Felder bereinigt werden sollen, füge sie hier hinzu
+
+    // JSON zurück in einen String kodieren
+    return json_encode($data, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
 }
 
 
@@ -252,7 +308,7 @@ function get_courseIds() {
         }
         $final_courseidsArray[] = $courseid;
     }
-    var_dump($final_courseidsArray); 
+    var_dump($final_courseidsArray);
     return $final_courseidsArray;
 }
 
@@ -285,7 +341,7 @@ function get_uuids_by_courseids(array $courseids): array {
     foreach ($results as $record) {
         $uuids[$record->courseid] = $record->uuid;
     }
-    var_dump( $uuids); 
+    var_dump($uuids);
 
     return $uuids;
 }
@@ -330,8 +386,8 @@ function getFilteredCoursesData(string $url, array $uuids): ?array {
 
     // Auf die Daten im Schlüssel "data" zugreifen
     $courseData = $dataArray['data'];
-    echo "courseData <br/>"; 
-    var_dump($courseData); 
+    echo "courseData <br/>";
+    var_dump($courseData);
     // Gefilterte Daten basierend auf den UUIDs (entsprechen den "id"-Werten)
     $filteredData = array_filter($courseData, function ($item) use ($uuids) {
         return isset($item['id']) && in_array($item['id'], $uuids, true);

@@ -91,59 +91,77 @@ function start_putdata_process() {
 
     $filteredCourses = getFilteredCoursesData($url, $uuids);
     if ($filteredCourses) {
-        print_r($filteredCourses); // Gibt die gefilterten Kursdaten aus
+        echo ("filtered courses: ");
+        var_dump($filteredCourses); // Gibt die gefilterten Kursdaten aus
     } else {
         echo "Es konnten keine gefilterten Kursdaten abgerufen werden.";
     }
-    //echo "<br/>convert_moochub_to_amb<br/> ";
+    echo "<br/>convert_moochub_to_amb<br/> ";
+    $jsonData = convert_moochub_to_amb($filteredCourses);
+    echo "jsonData nach amb: " . $jsonData;
+    //$cleanJson = remove_html_from_json($jsonData);
+    
+    $cleanJson = '{
+        "title": "DT2 Dummykurs",
+        "description": "halloLernzielehalloKursaufbauhallo",
+        "courseUrl": "http:\/\/localhost\/course\/view.php?id=4",
+        "language": "de",
+        "cost": 0,
+        "courseMode": "online",
+        "logoUrl": "http:\/\/localhost\/pluginfile.php\/1\/local_ildmeta\/provider\/1\/2024-11-30_09-23-31.png"
+    }'; 
+    echo "cleanJson: " . $cleanJson;
+
     foreach ($filteredCourses as $result) {
-        foreach ($result as $object) {
+        //foreach ($result as $object) {
 
-            if (isset($object->uuid)) {
-                $uuid = $object->uuid;
-                $jsonData = json_encode($object);
-                echo "put jsonData = " . $jsonData;
+        if (isset($result['id'])) {
+            $uuid = $result['id'];
+            echo "Die UUID ist: " . $uuid;
 
-                $dataArray = json_decode($jsonData, true);
+            //$jsonData = json_encode($object);
+            echo "put cleanJson = " . $$cleanJson;
 
-                // Zugriff auf die UUID
-                //$uuid = $dataArray['uuid'];
-                echo "Die UUID ist: " . $uuid;
+            $dataArray = json_decode($$cleanJson, true);
 
-                $url = $baseurl . '/api/course-v2/' . $sourceslug . '/' . $uuid;
+            // Zugriff auf die UUID
+            //$uuid = $dataArray['uuid'];
+            echo "Die UUID ist: " . $uuid;
 
-                $ch = curl_init();
-                curl_setopt($ch, CURLOPT_URL, $url);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-                curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
-                curl_setopt(
-                    $ch,
-                    CURLOPT_HTTPHEADER,
-                    array(
-                        "accept: text/plain",
-                        "Authorization: Bearer " . $token,
-                        "Content-Type: application/json",
-                    )
-                );
+            $url = $baseurl . '/api/course-v2/' . $sourceslug . '/' . $uuid;
+            echo "url: " . $url;
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $jsonData);
+            curl_setopt(
+                $ch,
+                CURLOPT_HTTPHEADER,
+                array(
+                    "accept: text/plain",
+                    "Authorization: Bearer " . $token,
+                    "Content-Type: application/json",
+                )
+            );
 
-                $response = curl_exec($ch);
-                $err = curl_error($ch);
+            $response = curl_exec($ch);
+            $err = curl_error($ch);
 
-                // Status-Code ermitteln
-                $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            // Status-Code ermitteln
+            $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 
-                // cURL-Session schließen
-                curl_close($ch);
+            // cURL-Session schließen
+            curl_close($ch);
 
-                // Auf Fehler überprüfen und Antwort verarbeiten
-                if ($err) {
-                    echo "cURL Error #: " . $err;
-                } else {
-                    echo "HTTP Status Code: " . $http_status . "\n";
-                    echo "Response: " . $response;
-                }
+            // Auf Fehler überprüfen und Antwort verarbeiten
+            if ($err) {
+                echo "cURL Error #: " . $err;
+            } else {
+                echo "HTTP Status Code: " . $http_status . "\n";
+                echo "Response: " . $response;
             }
+            // }
         }
     }
 }
