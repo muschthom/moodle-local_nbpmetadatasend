@@ -55,6 +55,7 @@ class putdata_cron extends \core\task\scheduled_task {
 
 
 function start_putdata_process() {
+    /*
     echo "start_putdata_process";
     $baseurl = get_baseurl();
     //echo "baseurl = " . $baseurl;
@@ -164,4 +165,46 @@ function start_putdata_process() {
             // }
         }
     }
+        
+*/
+    // URL des Endpunkts
+    $url = 'https://dam.demo.meinbildungsraum.de/push-connector/api/course-v2/Trainspot2-THL/78ca3023-9e76-4cab-9391-61f82dcf362c';
+
+    // Daten, die gesendet werden sollen
+    $data = [
+        "title" => "Digital Trainer II - Crossing the Edge",
+        "description" => "Im großen Ganzen geht es in der Bildungsstory »Crossing the Edge« um geistige Beweglichkeit und die Bereitschaft, das eigene Digitale Mindset zu erweitern – sich mentales Rüstzeug für die Zukunft anzueignen. Es geht um Offenheit und das gute Gefühl, über sich hinauszuwachsen. Es geht um Kollaboration und gegenseitiges Lehren und Dazulernen. Und nicht zuletzt geht‘s um den Spaß am Neuen und am Lernerfolg: besser werden, Lösungen finden, Möglichkeiten nutzen.",
+        "courseUrl" => "https://dev-isy.th-luebeck.de/moodle3/course/view.php?id=35",
+        "language" => "de",
+        "cost" => 0,
+        "courseMode" => "online",
+        "logoUrl" => "https://dev-isy.th-luebeck.de/moodle3/pluginfile.php/1/local_ildmeta/provider/1/fhl-intern-logo.png"
+    ];
+
+    // cURL-Session initialisieren
+    $ch = curl_init($url);
+
+    // Optionen für cURL setzen
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); // Methode: PUT
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Antwort als String zurückgeben
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'accept: */*',
+        'Authorization: Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJzSkx6NXRqRU1LZ0hKbGxvdVFRbThHX2s3MkhCUzZfcHdPSHZGYzRmTTFjIn0.eyJleHAiOjE3MzMyOTc3NDAsImlhdCI6MTczMzI5NzQ0MCwianRpIjoiZDIwZWE5OTMtZWU1Mi00NzJjLTk1NWMtNjUyNDIwYTFkNDE4IiwiaXNzIjoiaHR0cHM6Ly9hYWkuZGVtby5tZWluYmlsZHVuZ3NyYXVtLmRlL3JlYWxtcy9uYnAtYWFpIiwiYXVkIjoiYWNjb3VudCIsInN1YiI6ImU0NmE0OTQwLTE2ZTctNGIwZC1hZDY2LTIwOWJjM2NhMGVkOCIsInR5cCI6IkJlYXJlciIsImF6cCI6IjI4ZjEwNWM5LWEyZjAtNDBkMy1iMDhiLTdhYWMwZTA1ODQ3ZSIsImFjciI6IjEiLCJyZWFsbV9hY2Nlc3MiOnsicm9sZXMiOlsib2ZmbGluZV9hY2Nlc3MiLCJ1bWFfYXV0aG9yaXphdGlvbiIsImRlZmF1bHQtcm9sZXMtbmJwLWFhaSJdfSwicmVzb3VyY2VfYWNjZXNzIjp7ImFjY291bnQiOnsicm9sZXMiOlsibWFuYWdlLWFjY291bnQiLCJtYW5hZ2UtYWNjb3VudC1saW5rcyIsImRlbGV0ZS1hY2NvdW50Iiwidmlldy1wcm9maWxlIl19LCIyOGYxMDVjOS1hMmYwLTQwZDMtYjA4Yi03YWFjMGUwNTg0N2UiOnsicm9sZXMiOlsiIGRhbS1zb3VyY2Utb3duZXI6VHJhaW5TcG90Mi1USEwiLCJkYW0tc291cmNlLW93bmVyOlRyYWluc3BvdDItVEhMIl19fSwic2NvcGUiOiJob21laWRwIiwiY2xpZW50SG9zdCI6IjEwLjY1LjguNyIsImNsaWVudEFkZHJlc3MiOiIxMC42NS44LjciLCJjbGllbnRfaWQiOiIyOGYxMDVjOS1hMmYwLTQwZDMtYjA4Yi03YWFjMGUwNTg0N2UifQ.dz8OI6Cgz115nLo7LjIp7KPeU8DBfG2MGJcVxd2CeFR4iGwNWht9G6B2F1i19Uh85B3cL-nT9cNfcdQNjXqXeLOdZvJ3AR3-ou2bYfG5PqBzjUkwdsXeFqjScY1E4gvaRZpZ_JqF38rZ6K11NO_BdiekzLVoEPB_LSZJKWr76xNkCPjnWbZD2VoyqoM_jXg3V9p6EcmcSom6aWocERu13aOhMNcJmDRpkV973hWdg2KzeHNgpLG1PxsHrQqmhouBdjO5Dp4GK5ZOpWX-9KpYYYIioTuQujyUksUuy6RZ3CKUHDKksZsZxmMsV-nBA5GxOpOd3lhMhE_Refv6bee6jw', // Ersetze "xxx" durch deinen echten Token
+        'Content-Type: application/json'
+    ]);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // JSON-Daten senden
+
+    // Anfrage ausführen und Antwort speichern
+    $response = curl_exec($ch);
+
+    // Fehler prüfen
+    if (curl_errno($ch)) {
+        echo 'cURL-Fehler: ' . curl_error($ch);
+    }
+
+    // Antwort ausgeben
+    echo $response;
+
+    // cURL-Session schließen
+    curl_close($ch);
 }
