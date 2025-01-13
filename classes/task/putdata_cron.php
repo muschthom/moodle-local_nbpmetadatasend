@@ -55,6 +55,7 @@ class putdata_cron extends \core\task\scheduled_task {
 
 
 function start_putdata_process() {
+    global $CFG, $DB;
 
     echo "start_putdata_process";
     $baseurl = get_baseurl();
@@ -76,7 +77,6 @@ function start_putdata_process() {
 
     $token = get_nbp_token($tokenfile, $clientid, $clientsecret);
 
-    global $CFG;
     require_once(__DIR__ . '/../../../../config.php');
     $systemUrl = $CFG->wwwroot;
     $url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';
@@ -96,8 +96,12 @@ function start_putdata_process() {
 
 
     foreach ($filteredCourses as $result) {
-        $cleanstring = preg_replace('/\s*class=["\'][^"\']*["\']/', '', $result["attributes"]["description"]);
+        $teasertext = $DB->get_field('ildmeta', 'teasertext', ['uuid' => $result['id']]);
+        $plainText = strip_tags($teasertext);
 
+        $cleanstring = preg_replace('/\s*class=["\'][^"\']*["\']/', '', $plainText);
+        //$cleanstring = "test beschreibung"; 
+        echo "cleanstring " . $cleanstring;
         $data = [
             "id" => $result['id'],
             "title" => $result["attributes"]["name"],
@@ -105,7 +109,7 @@ function start_putdata_process() {
             "description" => $cleanstring,
             "courseUrl" => $result["attributes"]["url"],
             //"logoUrl" => $result["attributes"]["image"]["contentUrl"],
-            "logoUrl" => 'localhost',
+            "logoUrl" => 'localhost123',
             "language" => $result["attributes"]["inLanguage"][0],
             "alternativeCourseUrl" => $result["attributes"]["url"],
             "courseCreator" => $result["attributes"]["instructor"][0]["name"],
@@ -123,6 +127,28 @@ function start_putdata_process() {
 
         ];
 
+        //$json_data = json_encode($data);
+        $json_data = '{
+            "title": "Englisch lernen",
+            "description": "Aus dieser Volltext-Beschreibung sollte Umfang und Form meines Kursinhalts hervor gehen.",
+            "courseUrl": "https://example.com/kurse/englisch_lernen/index",
+            "logoUrl": "https://example.com/logo.png",
+            "language": "de",
+            "alternativeCourseUrl": "https://example.com/kurse/englisch_lernen/index",
+            "courseCreator": "Lernimus",
+            "courseCreatorLogoUrl": "https://example.com/lernimus-logo.png",
+            "cost": 1234.56,
+            "courseMode": "online",
+            "street": "Kapelle-Ufer 2",
+            "postalCode": "D-10117",
+            "city": "Berlin",
+            "latitude": "52.52278002340085",
+            "longitude": "13.375684430248915",
+            "startDate": "2023-11-23T13:33:55.123456Z",
+            "endDate": "2023-11-23T13:33:55.123456Z"
+          }';
+        echo "jsondata : "  . $json_data;
+
         $url = $baseurl . '/api/course-v2/' . $sourceslug . '/' . $result['id'];
         //echo "url = " . $url;
 
@@ -137,7 +163,7 @@ function start_putdata_process() {
             'Authorization: Bearer ' . $token, // Ersetze "xxx" durch deinen echten Token
             'Content-Type: application/json'
         ]);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data)); // JSON-Daten senden
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data); // JSON-Daten senden
 
         // Anfrage ausführen und Antwort speichern
         $response = curl_exec($ch);
@@ -149,6 +175,8 @@ function start_putdata_process() {
 
         // Antwort ausgeben
         echo $response;
+        $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        echo "HTTP Status Code: " . $http_status . "\n";
 
         // cURL-Session schließen
         curl_close($ch);
