@@ -34,6 +34,13 @@ $tasks = [
         'disabled' => 1,
     ],
     [
+        'classname' => 'local_nbpmetadatasend\task\put_moochub_cron',
+        'blocking' => 0,
+        'hour' => '1',
+        'day' => '*',
+        'disabled' => 1,
+    ],
+    [
         'classname' => 'local_nbpmetadatasend\task\getdata_cron',
         'blocking' => 0,
         'hour' => '1',

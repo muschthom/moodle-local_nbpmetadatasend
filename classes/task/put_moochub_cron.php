@@ -40,21 +40,21 @@ if (!defined('MOODLE_INTERNAL')) {
  * Represents a scheduled task for deleting Possehl users.
  * Extends the core\task\scheduled_task class.
  */
-class putdata_cron extends \core\task\scheduled_task {
+class put_moochub_cron extends \core\task\scheduled_task {
 
     public function get_name() {
-        return get_string('put_data_cron', 'local_nbpmetadatasend');
+        return get_string('put_moochub_cron', 'local_nbpmetadatasend');
     }
 
 
 
     public function execute() {
-        start_putdata_process();
+        start_put_moochub_data_process();
     }
 }
 
 
-function start_putdata_process() {
+function start_put_moochub_data_process() {
     require_once(__DIR__ . '/../../../../config.php');
     global $CFG, $DB;
 
@@ -82,10 +82,83 @@ function start_putdata_process() {
     }
 
     foreach ($filteredCourses as $result) {
+        //var_dump($result);
+
         $teasertext = $DB->get_field('ildmeta', 'teasertext', ['uuid' => $result['id']]);
         $plainText = strip_tags($teasertext);
         $cleanstring = preg_replace('/\s*class=["\'][^"\']*["\']/', '', $plainText);
+        $result["attributes"]["description"] = $cleanstring;
 
+        global $DB; // Moodle-Datenbank-Objekt
+
+        // Kurs-ID festlegen
+        $courseid = get_courseid_by_uuid($result['id']);
+
+        // SQL-Abfrage definieren
+        $sql = "
+            SELECT 
+                c.shortname,
+                c.description,
+                c.idnumber
+            FROM 
+                {competency_coursecomp} cc
+            JOIN 
+                {competency} c
+            ON 
+                cc.competencyid = c.id
+            WHERE 
+                cc.courseid = :courseid
+        ";
+
+        // Parameter für die Abfrage
+        $params = ['courseid' => $courseid];
+
+        // Abfrage ausführen
+        $competencies = $DB->get_records_sql($sql, $params);
+
+        $result["attributes"]["teaches"] = []; // Initialisiere das teaches-Array
+
+        // Ergebnisse verarbeiten
+        if ($competencies) {
+            foreach ($competencies as $competency) {
+                echo "Shortname: " . $competency->shortname . "\n";
+                echo "Description: " . $competency->description . "\n";
+                echo "ID Number: " . $competency->idnumber . "\n";
+                echo "-------------------------\n";
+
+                $result["attributes"]["teaches"][] = [
+                    "name" => [
+                        [
+                            "inLanguage" => "de",
+                            "name" => $competency->shortname
+                        ]
+                    ],
+                    "description" => $competency->description,
+                    "educationalFramework" => "GRETA",
+                    "educationalFrameworkVersion" => "2",
+                    "url" => "www.example.com",
+                    "targetUrl" => "www.example.com",
+                    "educationalLevel" => [
+                        "educationalFramework" => "GRETA"
+                    ]
+                ];
+            }
+        } else {
+            echo "Keine Kompetenzen für den Kurs mit der ID $courseid gefunden.\n";
+        }
+
+        /*
+        $result["attributes"]["teaches"]["name"]["inLanguage"] = "de"; 
+        $result["attributes"]["teaches"]["name"]["inLanguage"] = $competency->shortname; 
+        $result["attributes"]["teaches"]["description"] = $competency->description;
+        $result["attributes"]["teaches"]["educationalFramework"] = "GRETA";
+        $result["attributes"]["teaches"]["educationalFrameworkVersion"] = "2";
+        $result["attributes"]["teaches"]["url"] = "www.example.com";
+        $result["attributes"]["teaches"]["targetUrl"] = "www.example.com";
+        $result["attributes"]["teaches"]["educationalLevel"]["educationalFramework"] = "GRETA";
+
+
+        /*
         $data = [
             "id" => $result['id'],
             "title" => $result["attributes"]["name"],
@@ -135,7 +208,9 @@ function start_putdata_process() {
           }';
           */
 
-        $url = $baseurl . '/api/course-v2/' . $sourceslug . '/' . $result['id'];
+        $json_data = json_encode($result);
+        //echo $json_data; 
+        $url = $baseurl . '/api/moochub/' . $sourceslug;
 
         $ch = curl_init($url);
 
@@ -162,7 +237,7 @@ function start_putdata_process() {
 
         if ($http_status == 204) {
             echo "Metadata successfully saved/updated for course " . $result["attributes"]["name"] .
-                " with uuid = ." . $result['id'] .  "\n";
+                " with uuid = " . $result['id'] .  "\n";
         }
 
         // cURL-Session schließen

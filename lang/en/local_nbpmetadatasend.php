@@ -24,6 +24,7 @@
  */
 $string['pluginname'] = 'nbp meta data send';
 $string['put_data_cron'] = 'Put Data to NBP Cron';
+$string['put_moochub_cron'] = 'Put Moochub data to NBP Cron';
 $string['get_data_cron'] = 'Get Data From NBP Cron';
 $string['delete_data_cron'] = 'Delete Data From NBP Cron';
 

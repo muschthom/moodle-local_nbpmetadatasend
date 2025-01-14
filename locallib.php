@@ -308,7 +308,7 @@ function get_courseIds() {
         }
         $final_courseidsArray[] = $courseid;
     }
-    var_dump($final_courseidsArray);
+    //var_dump($final_courseidsArray);
     return $final_courseidsArray;
 }
 
@@ -341,9 +341,23 @@ function get_uuids_by_courseids(array $courseids): array {
     foreach ($results as $record) {
         $uuids[$record->courseid] = $record->uuid;
     }
-    var_dump($uuids);
+    //var_dump($uuids);
 
     return $uuids;
+}
+
+function get_courseid_by_uuid($uuid) {
+    global $DB; // Zugriff auf die Moodle-Datenbank
+
+    // SQL-Abfrage: UUIDs für die angegebenen Course-IDs abrufen
+    $sql = "SELECT courseid 
+            FROM {ildmeta} 
+            WHERE uuid = :uuid";
+
+    // Abfrage ausführen
+    $results = $DB->get_record_sql($sql, array('uuid' => $uuid));
+
+    return $results->courseid;
 }
 
 /**
@@ -386,8 +400,6 @@ function getFilteredCoursesData(string $url, array $uuids): ?array {
 
     // Auf die Daten im Schlüssel "data" zugreifen
     $courseData = $dataArray['data'];
-    echo "courseData <br/>";
-    //var_dump($courseData);
     // Gefilterte Daten basierend auf den UUIDs (entsprechen den "id"-Werten)
     $filteredData = array_filter($courseData, function ($item) use ($uuids) {
         return isset($item['id']) && in_array($item['id'], $uuids, true);
@@ -398,6 +410,7 @@ function getFilteredCoursesData(string $url, array $uuids): ?array {
 
 
 function get_new_token($tokenFile, $clientId, $clientSecret) {
+    $tokenFilePath = __DIR__ . '/classes/task/token.json';
 
     //TODO: URL anpassen, passt derzeit nicht mit URL aus DB zusammen
     $url = "https://aai.demo.meinbildungsraum.de/realms/nbp-aai/protocol/openid-connect/token";
@@ -415,7 +428,7 @@ function get_new_token($tokenFile, $clientId, $clientSecret) {
     $response = curl_exec($curl);
     $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
-    if ($statusCode == 200) {
+    if ($statusCode == 204) {
         $data = json_decode($response, true);
         $expiresIn = $data["expires_in"];
         $accessToken = $data["access_token"];
@@ -425,10 +438,15 @@ function get_new_token($tokenFile, $clientId, $clientSecret) {
             "token" => $accessToken,
             "expires" => time() + $expiresIn - 30 // 30 Sekunden Sicherheitspuffer
         ];
-        file_put_contents($tokenFile, json_encode($tokenInfo));
-    } else {
-        // Fehlerbehandlung
-        echo "Fehler beim Abrufen des Tokens: HTTP-Status $statusCode\n";
+        $dirname = dirname($tokenFilePath);
+        if (!is_dir($dirname)) {
+            mkdir($dirname, 0777, true);
+        }
+
+        // Write with error checking
+        if (file_put_contents($tokenFilePath, json_encode($tokenInfo)) === false) {
+            mtrace('Error writing to token file');
+        }
     }
 
     curl_close($curl);
@@ -448,4 +466,33 @@ function get_nbp_token($tokenFile, $clientId, $clientSecret) {
     }
 
     return $tokenInfo["token"];
+}
+
+
+function return_token($clientId,$clientSecret) {
+    //TODO: URL anpassen, passt derzeit nicht mit URL aus DB zusammen
+    $url = "https://aai.demo.meinbildungsraum.de/realms/nbp-aai/protocol/openid-connect/token";
+    $credentials = base64_encode("$clientId:$clientSecret");
+
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
+    curl_setopt($curl, CURLOPT_HTTPHEADER, [
+        "Authorization: Basic $credentials",
+        "Content-Type: application/x-www-form-urlencoded"
+    ]);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+
+    $response = curl_exec($curl);
+    $statusCode = curl_getinfo($curl, CURLINFO_HTTP_CODE);
+
+    if ($statusCode < 400) {
+        $data = json_decode($response, true);
+        return $data["access_token"]; 
+    } else {
+        // Fehlerbehandlung
+        echo "Fehler beim Abrufen des Tokens: HTTP-Status $statusCode\n";
+    }
+
+    curl_close($curl);
 }
