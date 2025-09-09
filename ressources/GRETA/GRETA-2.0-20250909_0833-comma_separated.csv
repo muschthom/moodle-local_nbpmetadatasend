@@ -1,0 +1,500 @@
+"Übergeordnete ID-Nummer",ID-Nummer,Kurzname,Beschreibung,Beschreibungsformat,Skalenwerte,Skalenkonfiguration,"Regeltyp (optional)","Regelergebnis (optional)","Regelkonfiguration (optional)","Querverweisende Kompetenz-ID-Nummern","Exportierte ID (optional)","Ist Kompetenzrahmen",Taxonomie
+,2.0,GRETA,"<p dir=""ltr"" style=""text-align:left;"">URL zu allen Facetten: <a href=""https://www.greta-die.de/webpages/kompetenzfacetten-index"" target=""_blank"" rel=""noreferrer noopener"">https://www.greta-die.de/webpages/kompetenzfacetten-index</a><br /></p>",1,"Nutzt Wissen über einzelne Fakten,Reflektiert das Wissen in Einzelfällen,Berücksichtigt den Gesamtzusammenhang und wägt Fakten ab","[{""scaleid"":""1""},{""id"":1,""scaledefault"":0,""proficient"":1},{""id"":2,""scaledefault"":0,""proficient"":1},{""id"":3,""scaledefault"":1,""proficient"":1}]",,,,,,1,"competency,competency,competency,competency"
+,greta-ka01,"Berufspraktisches Wissen und Können","Beschreibung Berufspraktisches Wissen und Können<br />",1,,,,0,null,,1,,
+greta-ka01,greta-ka01-kb01,"Didaktik und Methodik","Beschreibung Didaktik und Methodik<br />",1,,,,0,null,,2,,
+greta-ka01-kb01,greta-ka01-kb01-kf01,"Lerninhalte und -ziele","Die Planung und der Einsatz von Lerninhalten und -zielen umfassen das 
+Wissen und Können hinsichtlich der Formulierung und Festlegung eines 
+Lehrplans sowie von Lerninhalten und -zielen für ein Lehr-Lern-Angebot. 
+Lernziele dienen der Orientierung und Qualitätssicherung im Hinblick auf
+ die eigene Unterrichtsplanung, der reflektierten Auswahl von 
+Lerninhalten sowie als Vergleichspunkt für Evaluationen und 
+Lernstandkontrollen. Bei der Planung und Auswahl von Lerninhalten gilt 
+es sowohl die Qualität der Inhalte als auch der verwendeten (digitalen) 
+Informationskanäle und -quellen kritisch zu prüfen und zu bewerten. Die 
+Planung der Inhalte und Ziele eines Lerngegenstandes sollte in erster 
+Linie an den Teilnehmenden ausgerichtet sein: Inhalte und Ziele sollten 
+sinnvoll, relevant, lebensdienlich, aktuell und nützlich sein sowie an 
+bestehendes Wissen und Können der Teilnehmenden anknüpfen. Auch sollten 
+die Lerninhalte und -ziele für die Teilnehmenden transparent sein und – 
+je nach Kontext – gemeinsam mit den Teilnehmenden dialogisch erarbeitet 
+werden.",1,,,,0,null,,3,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,4,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,5,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,6,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,7,,
+greta-ka01-kb01,greta-ka01-kb01-kf02,"Methoden, Medien und Lernmaterialien","Die Kompetenzfacette Methoden, Medien und Lernmaterialien umfasst die 
+reflektierte und kritische Auswahl, Nutzung und Gestaltung geeigneter 
+Methoden, (digitaler) Medien und Lernmaterialien zur Unterstützung und 
+Evaluation von Lehr-Lern-Prozessen. Nur wenn Methoden, (digitale) Medien
+ und Lernmaterialien an vorher festgelegten Lernzielen ausgerichtet 
+sind und verschiedene Einflussfaktoren berücksichtigt werden, wird das 
+aktive Lernen optimal begünstigt bzw. ermöglicht. Neben der Ausrichtung 
+auf die Lernziele sollten Methoden, (digitale) Medien und 
+Lernmaterialien an den zu vermittelnden Inhalten sowie den Interessen, 
+(Lern-)Bedürfnissen und Motivationslagen der Teilnehmenden ausgerichtet 
+sein und gegebene Rahmenbedingungen berücksichtigen. Bei der Auswahl, 
+Nutzung und Gestaltung geeigneter Methoden, (digitaler) Medien und 
+Lernmaterialien müssen medien-, urheber- und datenschutzrechtliche sowie
+ medienethische Aspekte, wie beispielsweise die Regeln des 
+Urheberrechtes und der Umgang mit sensiblen Daten, berücksichtigt 
+werden. Die im Lehr-Lern-Prozess eingesetzten Methoden, Medien und 
+Lernmaterialien müssen evaluiert werden. Für diese Evaluation ist es 
+notwendig, dass Lehrende sich von den Lernenden Feedback einholen, um 
+auf Basis dieses Feedbacks Optimierungen am Lehr-Lern-Angebot 
+vorzunehmen.",1,,,,0,null,,8,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen</p>",1,,,,0,null,,9,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,10,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,11,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,12,,
+greta-ka01-kb01,greta-ka01-kb01-kf03,"Rahmenbedingungen und Lernumgebungen","Die Kompetenzfacette Rahmenbedingungen und Lernumgebungen umfasst 
+räumliche, zeitliche, personelle, mediale und organisatorische 
+Rahmenbedingungen, in die das Lehr-Lern-Setting eingebettet ist und die 
+mehr oder minder planvoll beeinflusst werden können. Zu den 
+Rahmenbedingungen zählen beispielsweise die Teilnehmendenzahl, die 
+Zielgruppe, das Thema, der physische oder digitale Ort, die Dauer, das 
+Material sowie die Medien, welche zur Verfügung stehen. 
+Digital-gestützte Lernumgebungen kommen immer häufiger zum Einsatz und 
+lassen sich als planmäßig gestaltete Lernarrangements verstehen, in 
+denen basierend auf digitalen Medien und Infrastrukturen 
+Rahmenbedingungen geschaffen werden, die das Lernen ermöglichen und 
+fördern sollen. Damit Lernprozesse erfolgreich verlaufen, müssen 
+Lerninhalte und -ziele mit der gegebenen Lernumgebung kompatibel sein. 
+Die Aufgabe der Lehrenden besteht daher darin, Rahmenbedingungen vorab 
+zu klären und bestmöglich anzupassen und auszuschöpfen, um eine 
+konstruktiv-unterstützende (digital-gestützte) Lernumgebung zu schaffen",1,,,,0,null,,13,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,14,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,15,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,16,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,17,,
+greta-ka01-kb01,greta-ka01-kb01-kf04,Outcomeorientierung,"Die Kompetenzfacette Outcomeorientierung umfasst die Ausrichtung des 
+eigenen Lehrhandelns an zu erreichenden Lernergebnissen. Im Gegensatz 
+dazu steht die Orientierung an Lerninhalten (Inputorientierung). Mit 
+der Outcomeorientierung geht die Überzeugung einher, dass es nicht 
+ausreicht, den Teilnehmenden lediglich die Lerninhalte zur Verfügung zu 
+stellen, sondern dass das Lernen der Teilnehmenden gezielt angeregt, 
+gefördert und ermöglicht werden soll. Zur Outcomeorientierung gehört, 
+dass bereits die mikrodidaktische Feinplanung der konkreten 
+Lehr-Lern-Aktivitäten, der einzusetzenden Methoden und Materialien immer
+ auch im Hinblick auf die zu erreichenden Lernergebnisse erfolgt. Im 
+Verlauf des Lehr-Lern-Geschehens muss die Erreichung der zuvor 
+definierten Lernergebnisse durch Lernerfolgskontrollen im Sinne eines 
+Soll-Ist-Vergleichs überprüft werden. Zeitpunkt bzw. Häufigkeit und Art 
+der Lernerfolgskontrollen sollten situationsgerecht von der Lehrkraft 
+bestimmt werden. Die Lernerfolgskontrollen sollten zudem so gestaltet 
+sein, dass die Lernenden zur Reflexion ihres individuellen 
+Kompetenzentwicklungsprozesses angeregt werden. Dazu muss die Lehrkraft 
+verschiedene Methoden sowie (digitale) Tools/Werkzeuge kennen und im 
+Hinblick auf ihre Eignung für den jeweils gegebenen Kontext (Art der zu 
+überprüfenden Lernziele, Charakteristika der Teilnehmenden, 
+Prüfungssituation etc.) sowie  im Hinblick auf datenschutzrechtlichen 
+Aspekten beurteilen können. In rein digitalen Lehr-Lernsettings (z. B. 
+in asynchronen Kursen auf Lehr-Lern-Plattformen) werden Lernstand und 
+Lernerfolg häufig systemseitig definiert. Hier ist es erforderlich, dass
+ Lehrende, die diesen Erhebungen zugrunde liegenden datengestützten 
+Prozesse kennen und ggf. im Falle einer Nutzung der eigenen Beurteilung 
+zur Seite stellen.",1,,,,0,null,,18,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l01,"Kennen und verstehen","Inhalte wiedergeben und einordnen",1,,,,0,null,,19,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,20,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,21,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,22,,
+greta-ka01,greta-ka01-kb02,"Beratung/Individualisierte Lernunterstützung","Beschreibung Beratung/Individualisierte Lernunterstützung<br />",1,,,,0,null,,23,,
+greta-ka01-kb02,greta-ka01-kb02-kf01,Teilnehmendenorientierung,"<p dir=""ltr"" style=""text-align:left;"">Teilnehmende lassen sich von den Adressatinnen und Adressaten insofern 
+unterscheiden, als dass Teilnehmende die Personen sind, die tatsächlich 
+zu dem jeweiligen Kursangebot erscheinen, während Adressatinnen und 
+Adressaten als potenzielle Zielgruppe zu verstehen sind. 
+Teilnehmendenorientierung umfasst die Fähigkeit, bei der Planung und 
+Durchführung eines Kurses Wissen über relevante Merkmale der 
+Teilnehmenden zu berücksichtigen, um das Lernangebot möglichst gut auf 
+die Bedürfnisse der Teilnehmenden hin abzustimmen: beispielsweise 
+demografische Merkmale und soziokulturelle Prägungen, Vorkenntnisse, 
+(Lern-) Interessen, vorhandene Ressourcen oder limitierende Faktoren. 
+Konkret heißt dies, dass die ausgewählten Lehr-Lern-Aktivitäten, die 
+Methoden, Techniken, (digitale) Medien, Tools/Werkzeuge, Inhalte und 
+Materialien so weit wie möglich mit den Möglichkeiten und Interessen der
+ Teilnehmenden im Einklang stehen sollen. Unter dem Aspekt von 
+demokratischer Partizipation und Empowerment gehört zur 
+Teilnehmendenorientierung ferner, die Teilnehmenden im Rahmen des 
+Möglichen an Entscheidungen, die den Kurs betreffen zu beteiligen, ihre 
+aktive Mitwirkung sowie ihre Selbststeuerungs- und Selbstlernkompetenzen
+ zu stärken. Lehrende sollten die passenden Lernimpulse setzen und das 
+Lernen anregen und unterstützen. In der Erwachsenen- und Weiterbildung 
+unterscheiden sich die Teilnehmenden in einem Kurs meist stärker 
+voneinander hinsichtlich des Alters, der ethnischen Herkunft und 
+Nationalität, der Religion und Weltanschauung, einer möglichen 
+Behinderung oder der sexuellen Orientierung und Identität, als es in 
+anderen Bildungsbereichen der Fall ist. Gleiches gilt oft auch für die 
+Vorkenntnisse und Vorbildung, welche die Teilnehmenden in den Kurs 
+mitbringen. Bei divers zusammengesetzten Teilnehmendengruppen erfordert 
+Teilnehmendenorientierung zudem die Fähigkeit zur Binnendifferenzierung 
+und Individualisierung des Unterrichts.<br /></p>",1,,,,0,null,,24,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,25,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,26,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,27,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,28,,
+greta-ka01-kb02,greta-ka01-kb02-kf02,"Diagnostik und Lernberatung","<p dir=""ltr"" style=""text-align:left;"">Lehrende müssen die Lernausgangslagen und Lernvoraussetzungen wie 
+beispielsweise Vorwissen, kognitive Bedingungen, Motivationen und 
+Interessen der Lernenden analysieren, um optimale Lernunterstützung 
+geben zu können. Für eine zielgerichtete Reaktion auf 
+Lernschwierigkeiten ist es zuerst notwendig, die genauen Lernhindernisse
+ und -probleme sowie die Gründe hierfür zu erkennen. Um die notwendigen 
+Informationen über die Lernenden zu erhalten, können Lehrende 
+unterschiedliche diagnostische Instrumente und digitale Tools/Werkzeuge 
+unter Wahrung der datenschutzrechtlichen Bestimmungen einsetzen, die 
+Ergebnisse auswerten und für Lernberatungsgespräche nutzen. Die 
+Lernberatungsgespräche sind als direkte individuelle und 
+personenbezogene Interaktionsprozesse zwischen Lehrenden und Lernenden 
+zu verstehen. Im Rahmen eines Lernberatungsgesprächs geht es um das 
+Reflektieren und Ermitteln von individuellen Lernsituationen und 
+-problemen einzelner Lernender. Durch gemeinsames Reflektieren und 
+Verstehen können so individuelle Lerngründe ermittelt und entsprechende 
+Lernimpulse gesetzt werden. <br /></p>",1,,,,0,null,,29,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,30,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,31,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,32,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,33,,
+greta-ka01,greta-ka01-kb03,"Kommunikation und Interaktion","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Kommunikation und Interaktion<br /></p>",1,,,,0,null,,34,,
+greta-ka01-kb03,greta-ka01-kb03-kf01,"Moderation und Steuerung von Gruppen","<p dir=""ltr"" style=""text-align:left;"">In der Erwachsenenbildung findet Lernen häufig gemeinsam in der Gruppe 
+statt. Eine Gruppe stellt eine Ansammlung von Individuen dar, in der 
+soziales Lernen zur Entfaltung einer eigenen Qualität und Dynamik führt.
+ Dabei werden die Lernchancen und Lerngrenzen durch Umgangsformen und 
+Kommunikationsstile der Gruppenmitglieder beeinflusst. Neben dem 
+Verstehen und Leiten von Gruppen sowie dem Wissen um Gruppendynamiken 
+und -strukturen sollten Lehrende daher die Fähigkeit besitzen, 
+Kommunikationsprozesse moderierend zu leiten, zu steuern und die 
+Vernetzung der Lernenden zu ermöglichen. Diese Art der Gruppenleitung 
+zielt darauf ab, das Leistungspotenzial der Gruppe zu aktivieren und zu 
+nutzen. Gruppen können sowohl im Präsenzraum als auch in 
+digital-gestützten Lehr-Lern-Settings zusammenarbeiten. Grundsätzlich 
+sind (Online-)Gruppenprozesse durch entsprechende (digitale) 
+Tools/Werkzeuge und (Online-)Moderationstechniken sinnvoll zu steuern 
+und zu strukturieren. Dazu gehört auch der konstruktive Umgang mit 
+technischen Problemen und Störungen innerhalb der Gruppe. Bei der 
+Steuerung von Gruppenprozessen besteht die Herausforderung darin, eine 
+vertrauensvolle Gesprächsatmosphäre herzustellen, Lernenden Raum zu 
+geben und eine Lernatmosphäre zu schaffen, in der sich Teilnehmende 
+sicher und wohl fühlen, motiviert sind und ihr individuelles 
+Leistungspotenzial zeigen können. Es lassen sich synchrone (also 
+zeitgleiche) und asynchrone (also zeitversetzte) Prozessverläufe 
+unterscheiden. Synchrone Kommunikationsverläufe finden sowohl in 
+digital-gestützten Lehr-Lern-Settings als auch im Präsenzraum statt. 
+Asynchrone Kommunikation findet vor allem durch digitale Medien und 
+mithilfe digitaler Anwendungen, Tools und Werkzeugen statt. Die 
+Moderation bzw. Steuerung von asynchron zusammenarbeitenden Gruppen 
+erfordert von den Lehrenden eine gute Strukturierung und Filterung der 
+Beiträge.<br /></p>",1,,,,0,null,,35,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,36,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,37,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,38,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,39,,
+greta-ka01-kb03,greta-ka01-kb03-kf02,"Professionelle Kommunikation","<p dir=""ltr"" style=""text-align:left;"">Die Relevanz einer professionellen Kommunikation zeigt sich an vielen 
+Stellen im Lehr-Lern-Prozess. Innerhalb und außerhalb des 
+Unterrichtsgeschehens sind Umgangsformen und professionelle 
+Gesprächsführung elementar. Diese Kommunikationsabläufe können von 
+Lehrenden gestaltet werden. Zum pädagogischen Repertoire der Lehrenden 
+gehören die Beachtung allgemeiner Umgangsregeln sowie die Gestaltung 
+einer kooperativen Gesprächskultur. Außerdem sollten Lehrende 
+organisatorische Kommunikationsabläufe sicherstellen und steuern. Diese 
+können mithilfe digitaler Medien, Tools und Werkzeugen unterstützt 
+werden, indem Lehrende beispielsweise verschiedene digitale 
+Kommunikationstools sinnvoll für den Austausch mit den Teilnehmenden 
+nutzen (z. B. zur Klärung organisatorischer Aspekte). So werden 
+organisatorische Abläufe verbessert und zusätzliche Informationen 
+bereitgestellt. Auch im digitalen Raum ist es erforderlich, 
+Verbindlichkeiten zwischen den Lernenden zu schaffen und Umgangsregeln 
+für die gemeinsame Kommunikation wie eine Netiquette zu etablieren. 
+Dabei gilt es, die Besonderheiten verbaler und non-verbaler 
+Kommunikation (z. B. Gestik, Mimik, Körpersprache) in digitalen 
+Lernumgebungen zu berücksichtigen.<br /></p>",1,,,,0,null,,40,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,41,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,42,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,43,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,44,,
+greta-ka01,greta-ka01-kb04,Organisation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Organisation<br /></p>",1,,,,0,null,,45,,
+greta-ka01-kb04,greta-ka01-kb04-kf01,"Kooperation mit den Auftraggebenden/Arbeitgebenden","<p dir=""ltr"" style=""text-align:left;"">Lehrende in der Erwachsenen- und Weiterbildung sollen unabhängig von 
+ihrer Beschäftigungssituation (freiberuflich tätig oder fest angestellt)
+ in der Lage sein, gut mit (potenziellen) Auftraggebenden bzw. 
+Arbeitgebenden zu kooperieren. Kooperation ist erforderlich bei der 
+Neukonzipierung oder Erweiterung von Angeboten zum Informationsaustausch
+ sowie bei der Suche nach gemeinsamen Problemlösungen. Dazu bedarf es 
+sozialer und kommunikativer Fähigkeiten, Verhandlungsgeschick, 
+Überzeugungsfähigkeit, Konfliktfähigkeit und Problemlösungskompetenz. 
+Freiberuflich tätig Lehrende, die neue Kooperationen anbahnen wollen, 
+müssen zudem in der Lage sein, sich relevante Informationen über 
+potenzielle Auftraggebende bzw. Arbeitgebende zu beschaffen, 
+beispielsweise zu deren Zielen, Adressatinnen und Adressaten, ihrem 
+Programm, spezifischen Honorarkorridoren, vorhandener (medialer) 
+Ausstattung sowie zu deren Organisationskultur und Werten. Hierzu sind 
+Fähigkeiten zur Informationsrecherche und -bewertung unter Nutzung 
+geeigneter (digitaler) Kanäle sowie Tools und Werkzeuge erforderlich. 
+Lehrende können mithilfe sozialer Medien potenzielle Auftraggebende bzw.
+ Arbeitgebende auf ihr berufliches Profil und ihre Angebote aufmerksam 
+machen.<br /></p>",1,,,,0,null,,46,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,47,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,48,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,49,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,50,,
+greta-ka01-kb04,greta-ka01-kb04-kf02,"Kollegiale Zusammenarbeit/Netzwerken","<p dir=""ltr"" style=""text-align:left;"">Für die Verortung von eigenen Angeboten benötigen Lehrende Kenntnisse 
+über die Strukturen und Angebote der Einrichtung, für die sie tätig 
+sind. Auf diese Weise können sie Querverbindungen zu anderen Angeboten 
+herstellen. Dazu bedarf es Fähigkeiten der kollegialen und 
+kommunikativen Zusammenarbeit innerhalb und außerhalb von beauftragenden
+ Einrichtungen sowie in interdisziplinären Teams. Bei der Lösung 
+technischer oder fachlich-didaktischer Fragestellungen kann eine 
+Zusammenarbeit mit interdisziplinären Teams oder Netzwerken 
+gewinnbringend sein. Dazu gehört auch die Erstellung und der Austausch 
+von freien Lern- und Lehrmaterialien, die unter offener Lizenz geteilt 
+werden können (Open Educational Resources, OER). Die Vernetzung und 
+Zusammenarbeit von Lehrenden kann über unterschiedliche formalisierte 
+und informelle Formate wie beispielsweise durch den kollegialen 
+Austausch, Fachtagungen, Netzwerke, professionelle Lerngemeinschaften 
+oder über Soziale Medien erfolgen.<br /></p>",1,,,,0,null,,51,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,52,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,53,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,54,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,55,,
+,greta-ka02,"Fach- und Feldspezifisches Wissen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Fach- und Feldspezifisches Wissen<br /></p>",1,,,,0,null,,56,,
+greta-ka02,greta-ka02-kb01,Feldbezug,"Beschreibung Feldbezug<br />",1,,,,0,null,,57,,
+greta-ka02-kb01,greta-ka02-kb01-kf01,"Adressatinnen und Adressaten","<p dir=""ltr"" style=""text-align:left;"">Die Adressatinnen und Adressaten eines bestimmten Lehr-Lern-Angebots 
+sind dessen potenzielle Zielgruppe, also alle Personen, an die sich das 
+Angebot richtet. Im Unterschied dazu sind Teilnehmende diejenigen 
+Personen, die tatsächlich zu dem jeweiligen Kursangebot erscheinen. Die 
+Adressatinnen und Adressaten eines Angebots zeichnen sich durch 
+bestimmte Merkmale aus (z. B. eine bestimmte Altersspanne, bestimmte 
+Interessenlagen, berufliche Ziele, Lebenssituationen, Vorkenntnisse), 
+aufgrund derer sie sich zur Zielgruppe des jeweiligen Kurses zählen 
+lassen. Die Beschäftigung mit Adressatinnen und Adressaten ist für 
+Lehrende vor allem in der Planungsphase des Angebots relevant. Lehrende 
+müssen Wissen über die relevanten Charakteristika der Adressatinnen und 
+Adressaten (z. B. Interessen, Gewohnheiten, Vorlieben, Bedürfnisse, 
+Ängste, vorhandene Ressourcen, Nutzungsgewohnheiten in Bezug auf 
+digitale Medien und Tools, bestehende Einschränkungen und Barrieren 
+etc.) haben. Zudem benötigen die Lehrenden das Wissen darüber, dass sich
+ die Gruppe der Adressatinnen und Adressaten durch die Digitalisierung 
+verändern kann, da digitale Lehr-Lern-Angebote eine ortsunabhängige 
+Teilnahme ermöglichen.<br /></p>",1,,,,0,null,,58,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,59,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,60,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,61,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,62,,
+greta-ka02-kb01,greta-ka02-kb01-kf02,"Feldspezifisches Wissen","<p dir=""ltr"" style=""text-align:left;"">Lehrende in der Erwachsenen- und Weiterbildung sollten Wissen über das 
+Feld der Erwachsenenbildung insgesamt sowie über die unterschiedlichen 
+Handlungsfelder besitzen. In Bezug auf die Erwachsenenbildung insgesamt 
+sollten Lehrende wissen, dass dieses Feld anders strukturiert ist und 
+anderen Ansprüchen folgt als der formale Bildungsbereich. Zudem 
+benötigen Lehrende Wissen über die Besonderheiten des Lernens im 
+Erwachsenenalter. Darüber hinaus gibt es in der Erwachsenen- und 
+Weiterbildung unterschiedliche Handlungsfelder, die sich über ihren 
+gesellschaftspolitischen Auftrag, ein spezifisches Bildungsverständnis, 
+die Funktion, ihre Themen sowie ihre Adressatinnen und Adressaten 
+definieren. Zu diesen Handlungsfeldern zählen die berufliche, 
+betriebliche, allgemeine, wissenschaftliche, politische und 
+konfessionelle Erwachsenenbildung. Lehrende sollten Wissen darüber 
+haben, welche Handlungsfelder mit welchen feldspezifischen Zielen und 
+Prinzipien in der Weiterbildung existieren und welchem Handlungsfeld die
+ Weiterbildungseinrichtung(en), in der bzw. denen sie tätig sind, 
+zugehörig sind. Dazu zählen auch die Besonderheiten hinsichtlich 
+organisatorischer und rechtlicher Rahmenbedingungen eines spezifischen 
+Handlungsfeldes. <br /></p>",1,,,,0,null,,63,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,64,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,65,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,66,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,67,,
+greta-ka02-kb01,greta-ka02-kb01-kf03,"Curriculare und institutionelle Rahmenbedingungen","<p dir=""ltr"" style=""text-align:left;"">Lehrende müssen sich mit den Anforderungen der 
+Weiterbildungseinrichtungen auseinandersetzen, für die sie tätig sind. 
+Im Gegensatz zu anderen Bildungsbereichen gibt es in der 
+Erwachsenenbildung unterschiedliche Vorgaben und Rahmenbedingungen, 
+welche die Lehrenden kennen müssen. Das Wissen über curriculare und 
+institutionelle Rahmenbedingungen umfasst sowohl Kenntnisse über die 
+spezifische Abfolge von Fachinhalten als auch Kenntnisse, die sich auf 
+dafür notwendige angemessene Materialien und (digitale) Medien beziehen.
+ Konkret bedeutet das für Lehrende beispielsweise die 
+einrichtungsinterne digitale Ausstattung und Vorgaben bzgl. 
+Softwarenutzung, die einrichtungsinternen Rahmenlehrpläne bzw. 
+Modulpläne (u. a. Hinweise zur Gestaltung von Lernumgebungen, Aspekte 
+der Qualitätssicherung, Erstellung und Abnahme von Prüfungen) sowie 
+dazugehörige Beratungs- und Supportkapazitäten des spezifischen 
+Weiterbildungsfeldes und der Weiterbildungseinrichtung zu kennen. <br /></p>",1,,,,0,null,,68,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,69,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,70,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,71,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,72,,
+,greta-ka03,"Professionelle Werthaltungen und Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Werthaltungen und Überzeugungen<br /></p>",1,,,,0,null,,73,,
+greta-ka03,greta-ka03-kb01,Berufsethos,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsethos<br /></p>",1,,,,0,null,,74,,
+greta-ka03-kb01,greta-ka03-kb01-kf01,Menschenbilder,"<p dir=""ltr"" style=""text-align:left;"">Die Kompetenzfacette Menschenbilder umfasst die eigenen Vorstellungen,
+ die Lehrende über Menschen und damit auch über ihre Teilnehmenden 
+haben. Die Lehrenden haben ein bestimmtes Menschenbild, das ihre 
+weltanschauliche Orientierung widerspiegelt. Es lassen sich verschiedene
+ Menschenbilder unterscheiden, wie das humanistische Menschenbild, das 
+kognitive Menschenbild, das behavioristische Menschenbild und das 
+psycho-dynamische Menschenbild. Lehrende sollten den Lernenden ein 
+Menschenbild vorleben, das zur Selbstentfaltung und Selbstverwirklichung
+ anregt. Darüber hinaus müssen Lehrende sich über den Einfluss des 
+Menschenbildes auf den Lehr-Lern-Prozess und dessen Qualität bewusst 
+sein.<br /></p>",1,,,,0,null,,75,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,76,,
+greta-ka03-kb01-kf01," greta-ka03-kb01-kf01-l06","Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,77,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,78,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,79,,
+greta-ka03-kb01,greta-ka03-kb01-kf02,Wertvorstellungen,"<p dir=""ltr"" style=""text-align:left;"">Das professionelle Handeln Lehrender basiert auf persönlichen 
+Wertvorstellungen, die das eigene professionelle Handeln prägen und 
+beeinflussen. Diese Vorstellungen beinhalten Haltungen, Einstellungen 
+und Werte, die Lehrende verinnerlicht haben und derer sie sich bewusst 
+sein sollen. Lehrende sollen empathisch sein sowie Verständnis für die 
+Gefühle und Sorgen der Teilnehmenden haben. Außerdem sollen sie ihren 
+Teilnehmenden mit Respekt, Achtung und Wertschätzung gegenübertreten. 
+Wertvorstellungen Lehrender sind auch dadurch geprägt, dass Lehrende ein
+ Bewusstsein für das Wohlergehen der Teilnehmenden haben und dafür die 
+Verantwortung tragen. Auch der Verinnerlichung von berufsethischen 
+Standards und Prinzipien kommt für das professionelle Handeln von 
+Lehrenden eine Bedeutung zu. <br /></p>",1,,,,0,null,,80,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,81,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,82,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,83,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,84,,
+greta-ka03,greta-ka03-kb02,"Berufsbezogene Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsbezogene Überzeugungen<br /></p>",1,,,,0,null,,85,,
+greta-ka03-kb02,greta-ka03-kb02-kf01,"Eigenes Rollenbewusstsein","<p dir=""ltr"" style=""text-align:left;"">Die Lehrtätigkeit hat sich in den vergangenen Jahrzehnten gewandelt. Die
+ traditionelle Rolle als Informationsvermittlerin oder 
+Informationsvermittler ist in den Hintergrund getreten. Vielmehr haben 
+die Aufgaben der Anleitung sowie Begleitung und Unterstützung beim 
+Lernprozess im Sinne einer Ermöglichungsdidaktik an Bedeutung gewonnen 
+und profilieren die Rolle der Lehrenden als Lernbegleiterin und 
+Lernbegleiter bzw. Lernunterstützerin und Lernunterstützer. Ebenso gibt 
+es eine Vielfalt an Rollenerwartungen an die Lehrtätigkeit, wie sich an 
+der begrifflichen Vielfalt (Lernbegleiterinnen und -begleiter, Lehrende,
+ Trainerinnen und Trainer, Teamerinnern und Teamer oder Dozentinnen und 
+Dozenten etc.) erkennen lässt. Lehrende müssen sich über die Erwartungen
+ und Anforderungen an ihre Rolle, die von unterschiedlichen Seiten an 
+sie herangetragen werden (u. a. von Teilnehmenden, Auftraggebenden), 
+bewusst werden und sich kritisch mit ihnen auseinandersetzen. Nur so 
+können sie sich klar dazu verhalten, Grenzen ziehen und produktiv auf 
+sie reagieren. Neben einem Bewusstsein für die eigene Rolle und der 
+Identifikation mit dieser ist es aber auch wichtig, bei Bedarf je nach 
+Lehr-Lern-Situation (Begleiten, Wissen vermitteln etc.) und 
+Lehr-Lern-Setting (hybrid, Präsenz, digital) flexibel zwischen 
+unterschiedlichen Rollen wechseln zu können.<br /></p>",1,,,,0,null,,86,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,87,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,88,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,89,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,90,,
+greta-ka03-kb02,greta-ka03-kb02-kf02,"Subjektive Annahmen über das Lehren und Lernen","<p dir=""ltr"" style=""text-align:left;"">Lehrende haben konkrete Vorstellungen  – sogenannte subjektive Annahmen 
+ – darüber, wie das Lernen und Lehren funktioniert und gestaltet werden 
+sollte. Diese subjektiven Annahmen lassen sich in konstruktivistische 
+und transmissive Theorien unterscheiden. Bei konstruktivistischen 
+Theorien wird das Lernen als aktiver Lernprozess verstanden und den 
+Lernenden wird eine aktive Rolle bei der Auseinandersetzung mit dem 
+Lerngegenstand zugeschrieben. Lehrende übernehmen die Rolle einer 
+Lernbegleiterin oder eines Lernbegleiters, welche oder welcher das 
+Lernen ermöglicht und begleitet und vor allem die Selbstständigkeit der 
+Lernenden fördert. Bei transmissiven Theorien hingegen wird Lernen als 
+einseitiger Informationsvermittlungsprozess betrachtet, in dem den 
+Lernenden eine passive Rolle zukommt. Lehrende nehmen die Rolle einer 
+Wissensvermittlerin oder eines Wissensvermittlers ein und sind vorrangig
+ für die Wissensweitergabe zuständig. Die eigenen subjektiven 
+Vorstellungen über das Lehren und Lernen beeinflussen die Qualität der 
+Lehr-Lern-Prozesse, wobei konstruktivistische subjektive Theorien 
+positiver für die Qualität von Lehr-Lern-Prozessen sind. Lehrende 
+sollten sich ihrer subjektiven Annahmen und deren Einfluss auf den 
+Lehr-Lern-Prozess bewusst sein.<br /></p>",1,,,,0,null,,91,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,92,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,93,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,94,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,95,,
+,greta-ka04,"Professionelle Selbststeuerung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Selbststeuerung<br /></p>",1,,,,0,null,,96,,
+greta-ka04,greta-ka04-kb01,"Motivationale Orientierungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Motivationale Orientierungen<br /></p>",1,,,,0,null,,97,,
+greta-ka04-kb01,greta-ka04-kb01-kf01,Selbstwirksamkeitsüberzeugungen,"<p dir=""ltr"" style=""text-align:left;"">Unter Selbstwirksamkeit wird die Überzeugung verstanden, über die 
+Fähigkeiten und Mittel zu verfügen, die für die erfolgreiche Bewältigung
+ gegebener Anforderungen oder für eine Zielerreichung notwendig sind. 
+Für Lehrende bedeutet dies, dass sie überzeugt davon sind, neue oder 
+schwierige Anforderungssituationen aufgrund der eigenen Kompetenzen 
+bewältigen zu können. Zudem gehen sie selbstbewusst davon aus, Kontrolle
+ über die Lehr-Lern-Prozesse und die Zielerreichung zu haben. 
+Selbstwirksamkeitsüberzeugungen beeinflussen u. a. die Ansprüche, die 
+Lehrende an ihr eigenes erwachsenenpädagogisches Handeln stellen. Sie 
+sind auch eng verknüpft mit der Wahrnehmung von Erfolg, Misserfolg und 
+Belastungen. Eine hohe Selbstwirksamkeit ist gekennzeichnet durch 
+zielgerichtetes Handeln auch unter herausfordernden Bedingungen.<br /></p>",1,,,,0,null,,98,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,99,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,100,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,101,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,102,,
+greta-ka04-kb01,greta-ka04-kb01-kf02,Enthusiasmus,"<p dir=""ltr"" style=""text-align:left;"">Enthusiasmus bezeichnet den Grad des positiven emotionalen Erlebens 
+während der Ausübung der Lehrtätigkeit. Hierzu gehören die Freude an der
+ Tätigkeit sowie die Tatsache, dass Lehrende aus eigenem Interesse 
+heraus handeln – frei von externem Druck oder Kontrolle.  Enthusiasmus 
+als motivationale Orientierung meint das persönliche Engagement und die 
+Begeisterungsfähigkeit von Lehrenden für ihr Fach und die Lehrtätigkeit 
+als solche.<br /></p>",1,,,,0,null,,103,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,104,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,105,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,106,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,107,,
+greta-ka04,greta-ka04-kb02,Selbstregulation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Selbstregulation<br /></p>",1,,,,0,null,,108,,
+greta-ka04-kb02,greta-ka04-kb02-kf01,"Umgang mit Feedback und Kritik","<p dir=""ltr"" style=""text-align:left;"">Feedback und Kritik nehmen in Lehr-Lern-Situationen eine besondere Rolle
+ ein. Dabei ist neben dem Erteilen von Feedback für Lehrende auch der 
+Umgang mit Feedback oder Kritik bezogen auf die eigene Person und das 
+eigene Handeln von Bedeutung. Konkret bedeutet dies, dass Lehrende in 
+der Lage sein sollten, mit Feedback und Kritik konstruktiv umzugehen. 
+Dazu gehört eine angemessene Reaktion auf positives und negatives 
+Feedback ebenso wie die Suche nach geeigneten Zeiträumen und Orten zum 
+Lösen von Problemen und Konflikten. Ebenfalls von Bedeutung für die 
+Wirkung von Feedback und Kritik ist das Medium, durch welches Feedback 
+kommuniziert wird. Eine Feedback- und Kritikfähigkeit ermöglicht einen 
+produktiven Umgang mit Irritationen und kann eine nachhaltige 
+Selbstreflexion ermöglichen.<br /></p>",1,,,,0,null,,109,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,110,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,111,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,112,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,113,,
+greta-ka04-kb02,greta-ka04-kb02-kf02,"Engagement und Distanz","<p dir=""ltr"" style=""text-align:left;"">Die Fähigkeit der Selbstregulation zeigt sich im verantwortungsvollen 
+Umgang mit den eigenen Ressourcen. Damit ist ein ausgewogenes Maß an 
+Engagement und Distanzierungsfähigkeit bezogen auf die Tätigkeit 
+gemeint. Besonders aufgrund der zunehmenden Entgrenzung durch die 
+Digitalisierung und die Möglichkeiten, überall und jederzeit zu 
+arbeiten, ist es wichtig, mit den eigenen Ressourcen bewusst umzugehen. 
+Die Verbindung von hohem Engagement und guter Distanzierungsfähigkeit 
+bewahrt die Lehrenden vor Erschöpfung und ermöglicht es ihnen, mit 
+Herausforderungen in ihrem pädagogischen Handeln effektiv umzugehen. Die
+ Fähigkeit, mit den eigenen Ressourcen gesund zu haushalten, wirkt sich 
+dabei sowohl auf die Qualität der Lehr-Lern-Prozesse als auch auf das 
+berufliche Wohlbefinden der Lehrenden aus, wovon letztendlich auch die 
+Teilnehmenden profitieren.<br /></p>",1,,,,0,null,,114,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,115,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,116,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,117,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,118,,
+greta-ka04,greta-ka04-kb03,"Berufspraktische Erfahrung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufspraktische Erfahrung<br /></p>",1,,,,0,null,,119,,
+greta-ka04-kb03,greta-ka04-kb03-kf01,"Reflexion des eigenen Lehrhandelns","<p dir=""ltr"" style=""text-align:left;"">Um immer wieder angemessenes und innovatives Lehrhandeln zeigen zu 
+können, ist es erforderlich, dass Lehrende ihr professionelles Handeln 
+selbst reflektieren. Hierzu gehört auch, sich in die Teilnehmenden 
+hineinzuversetzen und deren Perspektive einnehmen zu können. Die 
+Reflexion des Lehrhandelns ist die Voraussetzung dafür, dass die 
+Lehrenden nicht im einmal erworbenen berufspraktischen Erfahrungswissen 
+verharren. Eine Reflexion des Lehrhandelns kann entweder bereits in der 
+Handlung oder im Anschluss an die Handlung erfolgen. Gemeint ist damit 
+ein bewusstes Überlegen bzw. Reflektieren während oder nach einer 
+Handlungssituation. Lehrende sollten in der Lage sein und die 
+Bereitschaft zeigen, ein solch reflektiertes Nachdenken aktiv zu 
+betreiben. Eine Reflexion des Lehrhandelns kann in offener Form und in 
+strukturierter Weise allein oder mit Unterstützung Dritter erfolgen.<br /></p>",1,,,,0,null,,120,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,121,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,122,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,123,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,124,,
+greta-ka04-kb03,greta-ka04-kb03-kf02,"Berufliche Weiterentwicklung","<p dir=""ltr"" style=""text-align:left;"">Fachinhalte und professionelles Handlungswissen verändern sich unter dem
+ Einfluss gesamtgesellschaftlicher Entwicklungen. Zum Teil finden diese 
+Veränderungen, wie am Beispiel der Digitalisierung deutlich wird, mit 
+erheblicher Geschwindigkeit statt. Lehrende dürfen ihr Wissen und Können
+ nicht als statisch und starr begreifen, sondern müssen für die eigene 
+Kompetenzentwicklung Sorge tragen und sie als Grundlage ihres 
+professionellen Handelns sehen. Dazu gehört im Sinne einer individuellen
+ beruflichen Weiterentwicklung die Aufgeschlossenheit gegenüber 
+unterschiedlichen pädagogischen und fachlichen Themen sowie die 
+kritische Auseinandersetzung damit in Bezug auf die eigene Person und 
+die eigene berufliche Tätigkeit. Erforderlich sind ein Bewusstsein für 
+die Notwendigkeit solcher beruflichen Weiterentwicklungen wie auch die 
+Bereitschaft, die eigenen Kompetenzentwicklungsbedarfe festzustellen und
+ sich kontinuierlich weiterzuentwickeln.<br /></p>",1,,,,0,null,,125,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,126,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,127,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,128,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,129,,

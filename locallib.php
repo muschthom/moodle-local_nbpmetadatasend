@@ -496,3 +496,34 @@ function return_token($clientId,$clientSecret) {
 
     curl_close($curl);
 }
+
+
+function greta_get_attributes_from_json(string $filepath, string $shortcode): ?array {
+    if (!is_readable($filepath)) {
+        return null;
+    }
+
+    $json = file_get_contents($filepath);
+    if ($json === false) {
+        return null;
+    }
+
+    $data = json_decode($json, true);
+    if (!is_array($data)) {
+        return null;
+    }
+
+    // unterstütze verschiedene Wrap-Keys, z. B. greta_data oder greta_shortcodes
+    if (isset($data[$shortcode])) {
+        return (array)$data[$shortcode];
+    }
+    if (isset($data['greta_data'][$shortcode])) {
+        return (array)$data['greta_data'][$shortcode];
+    }
+    if (isset($data['greta_shortcodes'][$shortcode])) {
+        return (array)$data['greta_shortcodes'][$shortcode];
+    }
+
+    // nicht gefunden
+    return null;
+}

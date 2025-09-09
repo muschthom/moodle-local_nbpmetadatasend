@@ -47,7 +47,7 @@ $isymetadata_results = get_course_isymetadata($courseIds);
 $competencydata_results = get_course_competencydata($courseIds);
 
 //load greta competency model
-$greta_model = file_get_contents("ressources/greta_kompetenzmodell_2-1-0.json");
+$greta_model = file_get_contents("ressources/GRETA/greta_kompetenzmodell_2-1-0.json");
 
 
 //build trainspot moochub data
@@ -88,14 +88,13 @@ $download = optional_param('download', false, PARAM_BOOL);
 $metas = [];
 
 // Create Links for pagination as proposed by the JSON:API schema.
-$jsonlink = $CFG->httpswwwroot . '/local/ildmeta/get_moochub_courses.php';
+$jsonlink = $CFG->httpswwwroot . '/local/nbpmetadatasend/get_trainspot_courses.php';
 $metaslinks = ['self' => $jsonlink, 'first' => $jsonlink, 'last' => $jsonlink];
 $metas['links'] = $metaslinks;
 $metas['data'] = [];
 
 // Function to process input.
-function pproc_input($idnumbers)
-{
+function pproc_input($idnumbers) {
     // Create array for input.
     if (!is_array($idnumbers) and is_string($idnumbers)) {
         $idnumbers = [$idnumbers];
@@ -151,6 +150,7 @@ if (!isset($metarecords) or empty($metarecords)) {
 
     // Create a json entry for every course, that is supposed to be shared.
     foreach ($metarecords as $meta) {
+        //var_dump($meta);
         // Skip courses that are not supposed to be exported or a course record does not exist.
         $course = $DB->record_exists('course', array('id' => $meta->courseid));
         if ($meta->noindexcourse != 0 || !$course) {
@@ -163,9 +163,9 @@ if (!isset($metarecords) or empty($metarecords)) {
 
         $metaentry['attributes'] = [];
         $metaentry['attributes']['name'] = $meta->coursetitle;
-        $metaentry['attributes']['courseCode'] = $course->idnumber ?? null;
-        $metaentry['attributes']['courseMode'] = ['online', 'asynchronous'];
-        $metaentry['attributes']['learningResourceType'] = [
+        //$metaentry['attributes']['courseCode'] = $course->idnumber ?? null;
+        $metaentry['attributes']['courseMode'] = ['online', 'asynchronous']; //defined for our Trainspot courses
+        $metaentry['attributes']['learningResourceType'] = [     //defined by MOOChub schema
             "identifier" => "https://w3id.org/kim/hcrt/course",
             "type" => "Concept",
             "inScheme" => "https://w3id.org/kim/hcrt/scheme"
@@ -177,15 +177,26 @@ if (!isset($metarecords) or empty($metarecords)) {
             'uk',
             'ru'
         ];
-        $metaentry['attributes']['inLanguage'] = [$langlist[$meta->courselanguage]];
 
-        //edit: startDate
-        $metaentry['attributes']['startDate'] = date('c', $meta->starttime);
-        $metaentry['attributes']['endDate'] = null;
-        $metaentry['attributes']['expires'] = null;
-        if (isset($meta->availableuntil) && !empty($meta->availableuntil)) {
-            $metaentry['attributes']['expires'] = [date('c', $meta->availableuntil)];
+        // Default language is German.
+        $inlang = 'de';
+        if (isset($meta->courselanguage)) {
+            // if numeric, get language from list by index
+            if (is_numeric($meta->courselanguage)) {
+                $idx = (int)$meta->courselanguage;
+                if ($idx >= 0 && $idx < count($langlist)) {
+                    $inlang = $langlist[$idx];
+                }
+                // if string and in list, use directly
+            } elseif (is_string($meta->courselanguage) && in_array($meta->courselanguage, $langlist, true)) {
+                $inlang = $meta->courselanguage;
+            }
         }
+        $metaentry['attributes']['inLanguage'] = [$inlang];
+        //edit: startDate
+        $metaentry['attributes']['startDate'] = [date('c', $meta->starttime)];
+        $metaentry['attributes']['endDate'] = null; //no end date provided in project Trainspot
+        $metaentry['attributes']['expires'] = null; //no expiry date provided in project Trainspot
 
         // Get overview image from filestorage.
         // If no custom image ist set in ildmeta, then use the course image instead.
@@ -271,65 +282,58 @@ if (!isset($metarecords) or empty($metarecords)) {
         $competencies = $DB->get_records_sql($sql, ['courseid' => $meta->courseid]);
 
         foreach ($competencies as $competency) {
+            //var_dump($competency);
             $teaches = [];
 
             $teaches['educationalFramework'] = $competency->frameworkname;
+            $teaches['educationalFramework_version'] = $competency->frameworkversion;
+            $teaches['name'] = [];
+            $teaches['name'][0] = [];
+            $teaches['name'][0]['inLanguage'] = 'de';       //defined by Trainspot project
 
-            // Add taught competencies to metaentry.
+
+
+
             if ($teaches['educationalFramework'] == "GRETA") {
-                $teaches['name'] = [];
-                $teaches['name'][0] = [];
-                $teaches['name'][0]['inLanguage'] = 'de';
-                $teaches['name'][0]['name'] = $competency->shortname;
-                $teaches['description'] = $competency->description;
-                $teaches['educationalFramework'] = $competency->frameworkname;
-                $teaches['educationalFramework_version'] = $competency->frameworkversion;
+
+                $facetLevelShortcode = $competency->idnumber; //GRETA facet level e.g. greta-ka01-kb01-kf01-l01
+
+                $facetShortcode = preg_replace('/-l\d+$/', '', $facetLevelShortcode); //remove level part e.g. greta-ka01-kb01-kf01
+                $teaches['shortCode'] = $facetShortcode ?? null;
+                $facetdata = greta_get_attributes_from_json("ressources/GRETA/greta-shortcodes.json", $facetShortcode);
+                //var_dump($facetdata);
+                //get GRETA facet name 
+                $teaches['name'][0]['name'] = $facetdata['facet'] ?? $competency->shortname;
 
                 //new: URL to GRETA
-                $teaches['url'] = "https://www.greta-die.de/webpages/kompetenzfacetten-index";
+                $teaches['url'] = $facetdata['url'] ?? null;
 
-                $gretaCode = $competency->idnumber;
-                //$teaches['gretaCode'] = $gretaCode; 
-                //get greta URI for specific skill, in DEMO only for relevant GRETA-id-Numbers
-                //TODO: ergänzen
-                switch ($gretaCode) {
-                    case "GRETA-1-1-2":
-                        $teaches['targetUrl'] = "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-methoden-medien-und-lernmaterialien";
-                        break;
-                    case "GRETA-1-3-2":
-                        $teaches['targetUrl'] = "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-professionelle-kommunikation";
-                        break;
-                    case "GRETA-1-4-1":
-                        $teaches['targetUrl'] = "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-kooperation-mit-den-auftraggebenden-arbeitgebenden";
-                        break;
-                }
+                $teaches['educationalLevel'] = [];
+                $teaches['educationalLevel']["name"] = [];
+                $teaches['educationalLevel']["name"][0] = [];
 
-                //add required data with value NULL
-                $teaches['alternatename'] = NULL;
-                $teaches['shortCode'] = NULL;
-                $teaches['educationalLevel']['description'] = NULL;
-                $teaches['educationalLevel']['description'] = NULL;
-                $teaches['educationalLevel']['properties']['name']['items']['properties']['inLanguage'] = "de";
-                $teaches['educationalLevel']['properties']['name']['items']['properties']['name'] = "Mittel";
-                $teaches['educationalLevel']['properties']['alternateName'] = NULL;
-                $teaches['educationalLevel']['properties']['shortCode'] = NULL;
-                $teaches['educationalLevel']['properties']['educationalFramework'] = $competency->frameworkname;
-                $teaches['educationalLevel']['properties']['educationalFrameworkVersion'] = $competency->frameworkversion;
-                $teaches['educationalLevel']['properties']['url'] = "https://www.die-bonn.de/doks/dieresultate/2022-Greta-01.pdf";
-                $teaches['educationalLevel']['properties']['targetUrl'] = NULL;
-                $teaches['educationalLevel']['properties']['type'] = "EducationalLevel";
+                $teaches['educationalLevel']["name"][0]["name"] = $competency->shortname ?? null;
+                $teaches['educationalLevel']["name"][0]["inLanguage"] = "de";
+                $teaches['educationalLevel']["educationalFramework"] = $competency->frameworkname;
+                $teaches['educationalLevel']["educationalFrameworkVersion"] = $competency->frameworkversion;
+                $teaches['educationalLevel']["type"] = "EducationalLevel";
+                $teaches['educationalFrameworkVersion'] = $competency->frameworkversion;
+
+                $levelshortcode = $last = substr(strrchr($facetLevelShortcode, '-l0'), 1); // 'l01'
+                $levelshortcode = substr(trim($facetLevelShortcode), -1);
+
+                $teaches['educationalLevel']["shortCode"] = $levelshortcode ?? null;
 
                 $metaentry['attributes']['teaches'][] = $teaches;
-
             } else {
                 $teaches = [];
-                $teaches['name'] = [];
+                //$teaches['name'] = [];
                 $teaches['name'][0] = [];
                 $teaches['name'][0]['inLanguage'] = 'de';
                 $teaches['name'][0]['name'] = $competency->shortname;
                 $teaches['description'] = $competency->description;
                 $teaches['educationalFramework'] = $competency->frameworkname;
-                $teaches['educationalFramework_version'] = $competency->frameworkversion;
+                $teaches['educationalFrameworkVersion'] = $competency->frameworkversion;
                 $teaches['targetUrl'] = $competency->idnumber;
                 $metaentry['attributes']['teaches'][] = $teaches;
             }
@@ -339,6 +343,8 @@ if (!isset($metarecords) or empty($metarecords)) {
         if (isset($meta->processingtime) && !empty($meta->processingtime)) {
             $duration = 'PT' . $meta->processingtime . 'H';
             $metaentry['attributes']['duration'] = $duration;
+        } else {
+            $metaentry['attributes']['duration'] = 'PT0H'; 
         }
 
         // Set course provider.
@@ -377,7 +383,7 @@ if (!isset($metarecords) or empty($metarecords)) {
             $metaentry['attributes']['license'][0]['url'] = null;
         }
 
-        $metaentry['attributes']['access'] = ['free'];
+        $metaentry['attributes']['access'] = ['free'];  //all Trainspot courses are free to access
 
         // TODO Set audience.
         // TODO Set educationalAlignement.

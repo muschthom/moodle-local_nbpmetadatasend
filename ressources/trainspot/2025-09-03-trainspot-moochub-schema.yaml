@@ -1,0 +1,235 @@
+properties:
+  links:
+    required:
+      - self
+      - first
+      - last
+
+data:
+  type: array
+  items:
+    required:
+      - id
+      - type
+      - attributes
+    properties:
+      id:
+        type: string
+        format: uuid
+        description: "(z.59) The ID of the course as a UUID"
+      type:
+        type: string
+        enum: ["Course"]
+        description: '(z.66) Type of the object (must be "Course")'
+      attributes:
+        type: object
+        required:
+          - name
+          - learningResourceType
+          - publisher
+          - url
+          - license
+          - creator
+        properties:
+          name:
+            type: string
+            description: "(z.84) The title of the course"
+          learningResourceType:
+            type: object
+            description: "(z. 99) The learning resource type as listed at https://w3id.org/kim/hcrt/scheme. This describes the resource according to HCRT (Higher Education Resource Type)."
+            required:
+              - identifier
+              - type
+              - inScheme
+            properties:
+              identifier:
+                type: string
+                description: "This is an IRI pointing at a node describing the learning resource type. Currently, only https://w3id.org/kim/hcrt/course is allowed."
+                format: iri
+                enum: ["https://w3id.org/kim/hcrt/course"]
+              type:
+                type: string
+                enum: ["Concept"]
+              inScheme:
+                type: string
+                description: "A pointer to the used scheme. Currently, only https://w3id.org/kim/hcrt/scheme is allowed."
+                format: iri
+                enum: ["https://w3id.org/kim/hcrt/scheme"]
+          publisher:
+            description: "(z. 1274) The publisher of the course. Can be a person or an organization."
+            type: object
+            required:
+              - name
+              - type
+            properties:
+              name:
+                type: string
+              type:
+                type: string
+                enum: ["Organization"]
+          url:
+            type: string
+            format: uri
+            description: "(z.1628) Link to the course detail page"
+          license:
+            type: array
+            description: "(z.1663) Link to the course detail page"
+            required: 
+              - identifier
+              - url
+            items:
+              type: object
+              properties:
+                identifier:
+                  type: string
+                  description: "A license shortcode according to https://spdx.org/licenses/ or \"proprietary\"."
+                url:
+                  type: string
+                  format: uri
+          creator:
+            type: array
+            minItems: 1
+            description: "(z. 1957) List of creators of the course. Also organizations can be given."
+            items:
+              oneOf:
+                - type: object
+                  required:
+                    - name
+                    - type
+                  properties:
+                    name:
+                      type: string
+                    type:
+                      type: string
+                      enum: ["Organization"]
+                - type: object
+                  required:
+                    - name
+                    - type
+                  properties:
+                    name:
+                      type: string
+                    type:
+                      type: string
+                      enum: ["Person"]
+          # ergänzende relevante TRAINSPOT Daten
+          courseMode:
+            type: "array"
+            description: "(z. 131) This attribute describes the course mode. It is limited to \"blended\", \"online\", \"onsite\", \"synchronous\" and \"asynchronous\"."
+            items:
+              type: string
+              enum: 
+                - "blended"
+                - "online"
+                - "onsite"
+                - "synchronous"
+                - "asynchronous"
+          description: 
+            type: "string, null"
+            description: "(z.150) Description of the course as an HTML document"
+          inLanguage: 
+            type: "array, null"
+            description: "(z. 158) List of languages in which the course is offered. Each language should be abbreviated in accordance with BCP 47: https://tools.ietf.org/html/bcp47."
+          startDate:
+            type: "array, null"
+            type": "string"
+            description: "(z. 170) The time the course starts. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601."
+            items:
+              type: string             
+              format: date-time
+          endDate:
+            type: "array, null"
+            description: "(z. 183) The time the course ends. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601."
+            items:
+              type: string             
+              format: date-time
+          expires: 
+            type: "array, null"
+            description: "(z.197) The time and date the course is no longer available. It is possible to give several date-times for repetitive courses. The date-time to be given according to ISO 8601."
+            items:
+              type: string             
+              format: date-time
+          teaches: 
+            type: "array"
+            description: "(z.706) List of learning objectives for this course as an array of Skill object"
+            required:
+              - name
+              - educationalFramework
+              - educationalFrameworkVersion
+            items:
+              properties: 
+                name:
+                  type: array
+                  description: "List of names of the skill. This array allows localized strings. A name and a language have to be given in the respective element."
+                educationalFramework: 
+                  type: string
+                  description: "The name of the educational framework that describes the skill"
+                  enum: 
+                    - ESCO
+                    - DigComp
+                    - GRETA
+                educationalFrameworkVersion:
+                  type: string
+                  description: "The version of the educational framework that describes the skill. Can also be the year the framework was released/published."
+                url:
+                  type: string
+                  description: "Facet-URL according to https://www.greta-die.de/webpages/kompetenzfacetten-index"
+                shortCode: 
+                  type: "string"
+                  description: "(z.752) The short code of the skill if the used framework provides one. First draft: https://owncloud.oncampus.de/apps/files/files/2906731?dir=/TrainSpot2/Technik/Kurssuche%20und%20KI-Empfehlungssystem/kursmetadaten/2025-07-08-trainspot-moochub-data&openfile=true"
+                educationalLevel: 
+                  type: "object"
+                  description: "(z. 797) This schema describes the attributes of an educational level."
+                  required:
+                    - name
+                    - educationalFramework
+                    - educationalFrameworkVersion
+                    - type
+                  properties:
+                    name:
+                      type: string
+                      description: "(z.810) List of names of the educational level. This array allows localized strings. A name and a language have to be given in the respective field."
+                      required:
+                        - name
+                        - inLanguage
+                      items:
+                        properties: 
+                          name:
+                            type: string
+                            description: "(z. 821) The name of the educational level in the given language by the \"inLanguage\" attribute."
+                          inLanguage:
+                            type: string
+                            description: "(z.816) The language the name is given in. Has to be a shortcode according to BCP 47."
+                    educationalFramework:
+                      type: string  
+                      description: "(z. 852) The name of the educational framework that describes the educational level."
+                      enum: 
+                        - ESCO
+                        - DigComp
+                        - GRETA
+                    educationalFrameworkVersion:
+                      type: string
+                      description: "(z. 861) The version of the educational framework that describes the skill. Can also be the year the framework was released/published."
+                    type:
+                      type: string
+                      enum: "EducationalLevel"
+                    shortCode: 
+                      type: string
+                      description: "(z. 338) A short code for the educational level if it is provided by the used framework. First draft: https://owncloud.oncampus.de/apps/files/files/2906731?dir=/TrainSpot2/Technik/Kurssuche%20und%20KI-Empfehlungssystem/kursmetadaten/2025-07-08-trainspot-moochub-data&openfile=true"
+          duration: 
+            type: "string"
+            description: "(z.907) ISO 8601 encoded duration of the course."
+          access: 
+            type: "array, null"
+            description: "(z. 1703) Specifies how this course can be accessed by learners. The different access options shall not be used to transport differences between available content under this access option but rather annotate the course track or certificate that can be achieved."
+            items:
+              type: string
+              enum: 
+                - "free"
+                - "paid"
+                - "student"
+                - "other"
+          keywords: 
+            type: "array, null"
+            description: "(z. 2317) Keywords describing the course."
+          

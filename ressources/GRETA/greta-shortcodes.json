@@ -1,0 +1,142 @@
+{
+    "greta_data": {
+        "greta-ka01-kb01-kf01": {
+            "aspect": "Kompetenzaspekt",
+            "area": "Didaktik und Methodik",
+            "facet": "Lerninhalte und -ziele",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kf1-lerninhalte-und-ziele-1"
+        },
+        "greta-ka01-kb01-kf02": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Didaktik und Methodik",
+            "facet": "Methoden, Medien und Lernmaterialien",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-methoden-medien-und-lernmaterialien"
+        },
+        "greta-ka01-kb01-kf03": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Didaktik und Methodik",
+            "facet": "Rahmenbedingungen und Lernumgebungen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-rahmenbedingungen-und-lernumgebungen"
+        },
+        "greta-ka01-kb01-kf04": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Didaktik und Methodik",
+            "facet": "Outcomeorientierung",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-outcomeorientierung"
+        },
+        "greta-ka01-kb02-kf01": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Beratung/Individualisierte Lernunterstützung",
+            "facet": "Teilnehmendenorientierung",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-teilnehmendenorientierung"
+        },
+        "greta-ka01-kb02-kf02": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Beratung/Individualisierte Lernunterstützung",
+            "facet": "Diagnostik und Lernberatung",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-diagnostik-und-lernberatung"
+        },
+        "greta-ka01-kb03-kf01": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Kommunikation und Interaktion",
+            "facet": "Moderation und Steuerung von Gruppen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-moderation-und-steuerung-von-gruppen"
+        },
+        "greta-ka01-kb03-kf02": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Kommunikation und Interaktion",
+            "facet": "Professionelle Kommunikation",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-professionelle-kommunikation"
+        },
+        "greta-ka01-kb04-kf01": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Organisation",
+            "facet": "Kooperation mit den Auftraggebenden/Arbeitgebenden",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-kooperation-mit-den-auftraggebenden-arbeitgebenden"
+        },
+        "greta-ka01-kb04-kf02": {
+            "aspect": "Berufspraktisches Wissen und Können",
+            "area": "Organisation",
+            "facet": "Kollegiale Zusammenarbeit/ Netzwerken",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-kollegiale-zusammenarbeit-netzwerken"
+        },
+        "greta-ka02-kb01-kf01": {
+            "aspect": "Fach- UND feldspezifisches Wissen",
+            "area": "Feldbezug",
+            "facet": "Adressatinnen und Adressaten",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-adressatinnen-und-adressaten"
+        },
+        "greta-ka02-kb01-kf02": {
+            "aspect": "Fach- UND feldspezifisches Wissen",
+            "area": "Feldbezug",
+            "facet": "Feldspezifisches Wissen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-feldspezifisches-wissen"
+        },
+        "greta-ka02-kb01-kf03": {
+            "aspect": "Fach- UND feldspezifisches Wissen",
+            "area": "Feldbezug",
+            "facet": "Curriculare und institutionelle Rahmenbedingungen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-curriculare-und-institutionelle-rahmenbedingungen"
+        },
+        "greta-ka03-kb01-kf01": {
+            "aspect": "Professionelle Werthaltungen und Überzeugungen",
+            "area": "Berufsethos",
+            "facet": "Menschenbilder",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-menschenbilder"
+        },
+        "greta-ka03-kb01-kf02": {
+            "aspect": "Professionelle Werthaltungen und Überzeugungen",
+            "area": "Berufsethos",
+            "facet": "Wertvorstellungen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-wertvorstellungen"
+        },
+        "greta-ka03-kb02-kf01": {
+            "aspect": "Professionelle Werthaltungen und Überzeugungen",
+            "area": "Berufsbezogene Überzeugungen",
+            "facet": "Eigenes Rollenbewusstsein",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-eigenes-rollenbewusstsein"
+        },
+        "greta-ka03-kb02-kf02": {
+            "aspect": "Professionelle Werthaltungen und Überzeugungen",
+            "area": "Berufsbezogene Überzeugungen",
+            "facet": "Subjektive Annahmen über das Lehren und Lernen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-subjektive-annahmen-uber-das-lehren-und-lernen"
+        },
+        "greta-ka04-kb01-kf01": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Motivationale Orientierungen",
+            "facet": "Selbstwirksamkeitsüberzeugungen",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-selbstwirksamkeitsuberzeugungen"
+        },
+        "greta-ka04-kb01-kf02": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Motivationale Orientierungen",
+            "facet": "Enthusiasmus",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-enthusiasmus"
+        },
+        "greta-ka04-kb02-kf01": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Selbstregulation",
+            "facet": "Umgang mit Feedback und Kritik",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-umgang-mit-feedback-und-kritik"
+        },
+        "greta-ka04-kb02-kf02": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Selbstregulation",
+            "facet": "Engagement und Distanz",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-engagement-und-distanz"
+        },
+        "greta-ka04-kb03-kf01": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Berufspraktische Erfahrung",
+            "facet": "Reflexion des eigenen Lehrhandelns",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-reflexion-des-eigenen-lehrhandelns"
+        },
+        "greta-ka04-kb03-kf02": {
+            "aspect": "Professionelle Selbststeuerung",
+            "area": "Berufspraktische Erfahrung",
+            "facet": "Berufliche Weiterentwicklung",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-berufliche-weiterentwicklung"
+        }
+    }
+}

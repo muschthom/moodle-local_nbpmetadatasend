@@ -1,0 +1,149 @@
+{
+  "links": {
+    "self": "https://dev-isy.th-luebeck.de/moodle3/local/ildmeta/get_moochub_courses.php",
+    "first": "https://dev-isy.th-luebeck.de/moodle3/local/ildmeta/get_moochub_courses.php",
+    "last": "https://dev-isy.th-luebeck.de/moodle3/local/ildmeta/get_moochub_courses.php"
+  },
+  "data": [
+    {
+      "id": "f0bce46a-a7f8-4081-8d13-9fa38072b87f",
+      "type": "Course",
+      "attributes": {
+        "name": "Digital Trainer (Gesamtkurs)",
+        "description": "<div><p>Der\r\n Kurs verfolgt im Zuge der fortschreitenden Digitalisierung von Arbeits-\r\n und Geschäftsprozessen das Ziel, deine digitale Kompetenz und Methodik \r\nzu stärken und ein vertieftes Bewusstsein für neue digitale Lernfelder \r\nzu entwickeln. Zugleich steht eine\r\n    Verbesserung der Selbstvermarktung und ein Erkennen neuer \r\nHandlungsoptionen im Vordergrund.</p>\r\n</div>",
+        "courseMode": ["online", "asynchronous"],
+        "inLanguage": ["de"],
+        "startDate": ["2025-01-15T10:00:00Z"],
+        "endDate": null,
+        "expires": null,
+        "duration": "PT30H",
+        "access": ["free"],
+        "learningResourceType": {
+          "identifier": "https://w3id.org/kim/hcrt/course",
+          "type": "Concept",
+          "inScheme": "https://w3id.org/kim/hcrt/scheme"
+        },
+        "teaches": [
+          {
+            "name": [
+              {
+                "inLanguage": "de",
+                "name": "Methoden, Medien und Lernmaterialien"
+              }
+            ],
+            "educationalFramework": "GRETA",
+            "educationalFrameworkVersion": "2.0",
+            "shortCode": "greta-ka01-kb01-kf02",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-methoden-medien-und-lernmaterialien",
+            "educationalLevel": {
+              "name": [
+                {
+                  "inLanguage": "de",
+                  "name": "kennen und verstehen"
+                }
+              ],
+              "educationalFramework": "GRETA",
+              "educationalFrameworkVersion": "2.0",
+              "type": "EducationalLevel",
+              "shortCode": "1"
+
+            }
+          },
+          {
+            "name": [
+              {
+                "inLanguage": "de",
+                "name": "Methoden, Medien und Lernmaterialien"
+              }
+            ],
+            "educationalFramework": "GRETA",
+            "educationalFrameworkVersion": "2.0",
+            "shortCode": "greta-ka01-kb01-kf02",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-methoden-medien-und-lernmaterialien",
+            "educationalLevel": {
+              "name": [
+                {
+                  "inLanguage": "de",
+                  "name": "anwenden und umsetzen"
+                }
+              ],
+              "educationalFramework": "GRETA",
+              "educationalFrameworkVersion": "2.0",
+              "type": "EducationalLevel",
+              "shortCode": "2"
+
+            }
+          },
+          {
+            "name": [
+              {
+                "inLanguage": "de",
+                "name": "Kooperation mit den Auftraggebenden/Arbeitgebenden"
+              }
+            ],
+            "educationalFramework": "GRETA",
+            "educationalFrameworkVersion": "2.0",
+            "shortCode": "greta-ka01-kb04-kf01",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-kooperation-mit-den-auftraggebenden-arbeitgebenden",
+            "educationalLevel": {
+              "name": [
+                {
+                  "inLanguage": "de",
+                  "name": "kennen und verstehen"
+                }
+              ],
+              "educationalFramework": "GRETA",
+              "educationalFrameworkVersion": "2.0",
+              "type": "EducationalLevel",
+              "shortCode": "1"
+
+            }
+          },
+          {
+            "name": [
+              {
+                "inLanguage": "de",
+                "name": "Professionelle Kommunikation"
+              }
+            ],
+            "educationalFramework": "GRETA",
+            "educationalFrameworkVersion": "2.0",
+            "shortCode": "greta-ka01-kb03-kf02",
+            "url": "https://www.greta-die.de/webpages/kompetenzfacetten-index/kompetenzfacette-professionelle-kommunikation",
+            "educationalLevel": {
+              "name": [
+                {
+                  "inLanguage": "de",
+                  "name": "kennen und verstehen"
+                }
+              ],
+              "educationalFramework": "GRETA",
+              "educationalFrameworkVersion": "2.0",
+              "type": "EducationalLevel",
+              "shortCode": "1"
+
+            }
+          }
+        ],
+        "publisher": {
+          "name": "Technische Hochschule Lübeck",
+          "type": "Organization"
+        },
+        "url": "https://dev-isy.th-luebeck.de/moodle3/blocks/ildmetaselect/detailpage.php?id=48",
+        "license": [
+          {
+            "identifier": "GPL-3.0-or-later",
+            "url": "https://spdx.org/licenses/GPL-3.0-or-later.html"
+          }
+        ],
+        "creator": [
+          {
+            "name": "Technische Hochschule Lübeck",
+            "type": "Organization"
+          }
+        ],
+        "keywords": ["Digital Trainer", "Digitalisierung", "Methodenkompetenz", "digitale Kompetenz"]
+      }
+    }
+  ]
+}
