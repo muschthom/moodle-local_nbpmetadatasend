@@ -19,7 +19,7 @@
  * in folder /ressources/GRETA you find 
    * a description of the GRETA competency framework (json) 
    * a competency framework file (.csv) to be imported into Moodle at /admin/tool/lpimportcsv/index.php
-   * a json file (greta_kompetenzmodell_2-1-0.json) that is required to extract GRETA-related data to be inserted into the metadata
+   * a json file (greta-shortcodes.json) that is required to extract GRETA-related data to be inserted into the metadata
  * in folder /ressources/trainspot you find 
    * a description of Trainspot-required meta data to be send to the Datenraum (.yaml) 
    * an example dataset (2025-09-06-digitaltrainer1.json)
