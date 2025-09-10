@@ -282,7 +282,7 @@ if (!isset($metarecords) or empty($metarecords)) {
         $competencies = $DB->get_records_sql($sql, ['courseid' => $meta->courseid]);
 
         foreach ($competencies as $competency) {
-            //var_dump($competency);
+            var_dump($competency);
             $teaches = [];
 
             $teaches['educationalFramework'] = $competency->frameworkname;
