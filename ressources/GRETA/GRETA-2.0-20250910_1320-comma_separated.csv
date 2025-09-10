@@ -1,7 +1,7 @@
 "Übergeordnete ID-Nummer",ID-Nummer,Kurzname,Beschreibung,Beschreibungsformat,Skalenwerte,Skalenkonfiguration,"Regeltyp (optional)","Regelergebnis (optional)","Regelkonfiguration (optional)","Querverweisende Kompetenz-ID-Nummern","Exportierte ID (optional)","Ist Kompetenzrahmen",Taxonomie
 ,2.0,GRETA,"<p dir=""ltr"" style=""text-align:left;"">URL zu allen Facetten: <a href=""https://www.greta-die.de/webpages/kompetenzfacetten-index"" target=""_blank"" rel=""noreferrer noopener"">https://www.greta-die.de/webpages/kompetenzfacetten-index</a><br /></p>",1,"Nutzt Wissen über einzelne Fakten,Reflektiert das Wissen in Einzelfällen,Berücksichtigt den Gesamtzusammenhang und wägt Fakten ab","[{""scaleid"":""1""},{""id"":1,""scaledefault"":0,""proficient"":1},{""id"":2,""scaledefault"":0,""proficient"":1},{""id"":3,""scaledefault"":1,""proficient"":1}]",,,,,,1,"competency,competency,competency,competency"
-,greta-ka01,"Berufspraktisches Wissen und Können","Beschreibung Berufspraktisches Wissen und Können<br />",1,,,,0,null,,1,,
-greta-ka01,greta-ka01-kb01,"Didaktik und Methodik","Beschreibung Didaktik und Methodik<br />",1,,,,0,null,,2,,
+,greta-ka01,"Berufspraktisches Wissen und Können","Beschreibung Berufspraktisches Wissen und Können<br />",1,,,,0,null,,139,,
+greta-ka01,greta-ka01-kb01,"Didaktik und Methodik","Beschreibung Didaktik und Methodik<br />",1,,,,0,null,,140,,
 greta-ka01-kb01,greta-ka01-kb01-kf01,"Lerninhalte und -ziele","Die Planung und der Einsatz von Lerninhalten und -zielen umfassen das 
 Wissen und Können hinsichtlich der Formulierung und Festlegung eines 
 Lehrplans sowie von Lerninhalten und -zielen für ein Lehr-Lern-Angebot. 
@@ -17,11 +17,7 @@ sinnvoll, relevant, lebensdienlich, aktuell und nützlich sein sowie an
 bestehendes Wissen und Können der Teilnehmenden anknüpfen. Auch sollten 
 die Lerninhalte und -ziele für die Teilnehmenden transparent sein und – 
 je nach Kontext – gemeinsam mit den Teilnehmenden dialogisch erarbeitet 
-werden.",1,,,,0,null,,3,,
-greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,4,,
-greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,5,,
-greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,6,,
-greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,7,,
+werden.",1,,,,0,null,,141,,
 greta-ka01-kb01,greta-ka01-kb01-kf02,"Methoden, Medien und Lernmaterialien","Die Kompetenzfacette Methoden, Medien und Lernmaterialien umfasst die 
 reflektierte und kritische Auswahl, Nutzung und Gestaltung geeigneter 
 Methoden, (digitaler) Medien und Lernmaterialien zur Unterstützung und 
@@ -41,11 +37,7 @@ werden. Die im Lehr-Lern-Prozess eingesetzten Methoden, Medien und
 Lernmaterialien müssen evaluiert werden. Für diese Evaluation ist es 
 notwendig, dass Lehrende sich von den Lernenden Feedback einholen, um 
 auf Basis dieses Feedbacks Optimierungen am Lehr-Lern-Angebot 
-vorzunehmen.",1,,,,0,null,,8,,
-greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen</p>",1,,,,0,null,,9,,
-greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,10,,
-greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,11,,
-greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,12,,
+vorzunehmen.",1,,,,0,null,,142,,
 greta-ka01-kb01,greta-ka01-kb01-kf03,"Rahmenbedingungen und Lernumgebungen","Die Kompetenzfacette Rahmenbedingungen und Lernumgebungen umfasst 
 räumliche, zeitliche, personelle, mediale und organisatorische 
 Rahmenbedingungen, in die das Lehr-Lern-Setting eingebettet ist und die 
@@ -61,11 +53,7 @@ fördern sollen. Damit Lernprozesse erfolgreich verlaufen, müssen
 Lerninhalte und -ziele mit der gegebenen Lernumgebung kompatibel sein. 
 Die Aufgabe der Lehrenden besteht daher darin, Rahmenbedingungen vorab 
 zu klären und bestmöglich anzupassen und auszuschöpfen, um eine 
-konstruktiv-unterstützende (digital-gestützte) Lernumgebung zu schaffen",1,,,,0,null,,13,,
-greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,14,,
-greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,15,,
-greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,16,,
-greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,17,,
+konstruktiv-unterstützende (digital-gestützte) Lernumgebung zu schaffen",1,,,,0,null,,143,,
 greta-ka01-kb01,greta-ka01-kb01-kf04,Outcomeorientierung,"Die Kompetenzfacette Outcomeorientierung umfasst die Ausrichtung des 
 eigenen Lehrhandelns an zu erreichenden Lernergebnissen. Im Gegensatz 
 dazu steht die Orientierung an Lerninhalten (Inputorientierung). Mit 
@@ -92,12 +80,8 @@ in asynchronen Kursen auf Lehr-Lern-Plattformen) werden Lernstand und
 Lernerfolg häufig systemseitig definiert. Hier ist es erforderlich, dass
  Lehrende, die diesen Erhebungen zugrunde liegenden datengestützten 
 Prozesse kennen und ggf. im Falle einer Nutzung der eigenen Beurteilung 
-zur Seite stellen.",1,,,,0,null,,18,,
-greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l01,"Kennen und verstehen","Inhalte wiedergeben und einordnen",1,,,,0,null,,19,,
-greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,20,,
-greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,21,,
-greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,22,,
-greta-ka01,greta-ka01-kb02,"Beratung/Individualisierte Lernunterstützung","Beschreibung Beratung/Individualisierte Lernunterstützung<br />",1,,,,0,null,,23,,
+zur Seite stellen.",1,,,,0,null,,144,,
+greta-ka01,greta-ka01-kb02,"Beratung/Individualisierte Lernunterstützung","Beschreibung Beratung/Individualisierte Lernunterstützung<br />",1,,,,0,null,,145,,
 greta-ka01-kb02,greta-ka01-kb02-kf01,Teilnehmendenorientierung,"<p dir=""ltr"" style=""text-align:left;"">Teilnehmende lassen sich von den Adressatinnen und Adressaten insofern 
 unterscheiden, als dass Teilnehmende die Personen sind, die tatsächlich 
 zu dem jeweiligen Kursangebot erscheinen, während Adressatinnen und 
@@ -126,11 +110,7 @@ anderen Bildungsbereichen der Fall ist. Gleiches gilt oft auch für die
 Vorkenntnisse und Vorbildung, welche die Teilnehmenden in den Kurs 
 mitbringen. Bei divers zusammengesetzten Teilnehmendengruppen erfordert 
 Teilnehmendenorientierung zudem die Fähigkeit zur Binnendifferenzierung 
-und Individualisierung des Unterrichts.<br /></p>",1,,,,0,null,,24,,
-greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,25,,
-greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,26,,
-greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,27,,
-greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,28,,
+und Individualisierung des Unterrichts.<br /></p>",1,,,,0,null,,146,,
 greta-ka01-kb02,greta-ka01-kb02-kf02,"Diagnostik und Lernberatung","<p dir=""ltr"" style=""text-align:left;"">Lehrende müssen die Lernausgangslagen und Lernvoraussetzungen wie 
 beispielsweise Vorwissen, kognitive Bedingungen, Motivationen und 
 Interessen der Lernenden analysieren, um optimale Lernunterstützung 
@@ -147,13 +127,9 @@ zu verstehen. Im Rahmen eines Lernberatungsgesprächs geht es um das
 Reflektieren und Ermitteln von individuellen Lernsituationen und 
 -problemen einzelner Lernender. Durch gemeinsames Reflektieren und 
 Verstehen können so individuelle Lerngründe ermittelt und entsprechende 
-Lernimpulse gesetzt werden. <br /></p>",1,,,,0,null,,29,,
-greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,30,,
-greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,31,,
-greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,32,,
-greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,33,,
-greta-ka01,greta-ka01-kb03,"Kommunikation und Interaktion","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Kommunikation und Interaktion<br /></p>",1,,,,0,null,,34,,
-greta-ka01-kb03,greta-ka01-kb03-kf01,"Moderation und Steuerung von Gruppen","<p dir=""ltr"" style=""text-align:left;"">In der Erwachsenenbildung findet Lernen häufig gemeinsam in der Gruppe 
+Lernimpulse gesetzt werden. <br /></p>",1,,,,0,null,,147,,
+greta-ka01," greta-ka01-kb03","Kommunikation und Interaktion","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Kommunikation und Interaktion<br /></p>",1,,,,0,null,,148,,
+" greta-ka01-kb03",greta-ka01-kb03-kf01,"Moderation und Steuerung von Gruppen","<p dir=""ltr"" style=""text-align:left;"">In der Erwachsenenbildung findet Lernen häufig gemeinsam in der Gruppe 
 statt. Eine Gruppe stellt eine Ansammlung von Individuen dar, in der 
 soziales Lernen zur Entfaltung einer eigenen Qualität und Dynamik führt.
  Dabei werden die Lernchancen und Lerngrenzen durch Umgangsformen und 
@@ -181,12 +157,8 @@ Asynchrone Kommunikation findet vor allem durch digitale Medien und
 mithilfe digitaler Anwendungen, Tools und Werkzeugen statt. Die 
 Moderation bzw. Steuerung von asynchron zusammenarbeitenden Gruppen 
 erfordert von den Lehrenden eine gute Strukturierung und Filterung der 
-Beiträge.<br /></p>",1,,,,0,null,,35,,
-greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,36,,
-greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,37,,
-greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,38,,
-greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,39,,
-greta-ka01-kb03,greta-ka01-kb03-kf02,"Professionelle Kommunikation","<p dir=""ltr"" style=""text-align:left;"">Die Relevanz einer professionellen Kommunikation zeigt sich an vielen 
+Beiträge.<br /></p>",1,,,,0,null,,149,,
+" greta-ka01-kb03",greta-ka01-kb03-kf02,"Professionelle Kommunikation","<p dir=""ltr"" style=""text-align:left;"">Die Relevanz einer professionellen Kommunikation zeigt sich an vielen 
 Stellen im Lehr-Lern-Prozess. Innerhalb und außerhalb des 
 Unterrichtsgeschehens sind Umgangsformen und professionelle 
 Gesprächsführung elementar. Diese Kommunikationsabläufe können von 
@@ -204,12 +176,8 @@ Verbindlichkeiten zwischen den Lernenden zu schaffen und Umgangsregeln
 für die gemeinsame Kommunikation wie eine Netiquette zu etablieren. 
 Dabei gilt es, die Besonderheiten verbaler und non-verbaler 
 Kommunikation (z. B. Gestik, Mimik, Körpersprache) in digitalen 
-Lernumgebungen zu berücksichtigen.<br /></p>",1,,,,0,null,,40,,
-greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,41,,
-greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,42,,
-greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,43,,
-greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,44,,
-greta-ka01,greta-ka01-kb04,Organisation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Organisation<br /></p>",1,,,,0,null,,45,,
+Lernumgebungen zu berücksichtigen.<br /></p>",1,,,,0,null,,150,,
+greta-ka01,greta-ka01-kb04,Organisation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Organisation<br /></p>",1,,,,0,null,,151,,
 greta-ka01-kb04,greta-ka01-kb04-kf01,"Kooperation mit den Auftraggebenden/Arbeitgebenden","<p dir=""ltr"" style=""text-align:left;"">Lehrende in der Erwachsenen- und Weiterbildung sollen unabhängig von 
 ihrer Beschäftigungssituation (freiberuflich tätig oder fest angestellt)
  in der Lage sein, gut mit (potenziellen) Auftraggebenden bzw. 
@@ -228,11 +196,7 @@ Fähigkeiten zur Informationsrecherche und -bewertung unter Nutzung
 geeigneter (digitaler) Kanäle sowie Tools und Werkzeuge erforderlich. 
 Lehrende können mithilfe sozialer Medien potenzielle Auftraggebende bzw.
  Arbeitgebende auf ihr berufliches Profil und ihre Angebote aufmerksam 
-machen.<br /></p>",1,,,,0,null,,46,,
-greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,47,,
-greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,48,,
-greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,49,,
-greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,50,,
+machen.<br /></p>",1,,,,0,null,,152,,
 greta-ka01-kb04,greta-ka01-kb04-kf02,"Kollegiale Zusammenarbeit/Netzwerken","<p dir=""ltr"" style=""text-align:left;"">Für die Verortung von eigenen Angeboten benötigen Lehrende Kenntnisse 
 über die Strukturen und Angebote der Einrichtung, für die sie tätig 
 sind. Auf diese Weise können sie Querverbindungen zu anderen Angeboten 
@@ -247,13 +211,9 @@ werden können (Open Educational Resources, OER). Die Vernetzung und
 Zusammenarbeit von Lehrenden kann über unterschiedliche formalisierte 
 und informelle Formate wie beispielsweise durch den kollegialen 
 Austausch, Fachtagungen, Netzwerke, professionelle Lerngemeinschaften 
-oder über Soziale Medien erfolgen.<br /></p>",1,,,,0,null,,51,,
-greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,52,,
-greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,53,,
-greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,54,,
-greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,55,,
-,greta-ka02,"Fach- und Feldspezifisches Wissen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Fach- und Feldspezifisches Wissen<br /></p>",1,,,,0,null,,56,,
-greta-ka02,greta-ka02-kb01,Feldbezug,"Beschreibung Feldbezug<br />",1,,,,0,null,,57,,
+oder über Soziale Medien erfolgen.<br /></p>",1,,,,0,null,,153,,
+,greta-ka02,"Fach- und Feldspezifisches Wissen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Fach- und Feldspezifisches Wissen<br /></p>",1,,,,0,null,,154,,
+greta-ka02,greta-ka02-kb01,Feldbezug,"Beschreibung Feldbezug<br />",1,,,,0,null,,155,,
 greta-ka02-kb01,greta-ka02-kb01-kf01,"Adressatinnen und Adressaten","<p dir=""ltr"" style=""text-align:left;"">Die Adressatinnen und Adressaten eines bestimmten Lehr-Lern-Angebots 
 sind dessen potenzielle Zielgruppe, also alle Personen, an die sich das 
 Angebot richtet. Im Unterschied dazu sind Teilnehmende diejenigen 
@@ -271,11 +231,7 @@ digitale Medien und Tools, bestehende Einschränkungen und Barrieren
 etc.) haben. Zudem benötigen die Lehrenden das Wissen darüber, dass sich
  die Gruppe der Adressatinnen und Adressaten durch die Digitalisierung 
 verändern kann, da digitale Lehr-Lern-Angebote eine ortsunabhängige 
-Teilnahme ermöglichen.<br /></p>",1,,,,0,null,,58,,
-greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,59,,
-greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,60,,
-greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,61,,
-greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,62,,
+Teilnahme ermöglichen.<br /></p>",1,,,,0,null,,156,,
 greta-ka02-kb01,greta-ka02-kb01-kf02,"Feldspezifisches Wissen","<p dir=""ltr"" style=""text-align:left;"">Lehrende in der Erwachsenen- und Weiterbildung sollten Wissen über das 
 Feld der Erwachsenenbildung insgesamt sowie über die unterschiedlichen 
 Handlungsfelder besitzen. In Bezug auf die Erwachsenenbildung insgesamt 
@@ -294,11 +250,7 @@ Prinzipien in der Weiterbildung existieren und welchem Handlungsfeld die
  Weiterbildungseinrichtung(en), in der bzw. denen sie tätig sind, 
 zugehörig sind. Dazu zählen auch die Besonderheiten hinsichtlich 
 organisatorischer und rechtlicher Rahmenbedingungen eines spezifischen 
-Handlungsfeldes. <br /></p>",1,,,,0,null,,63,,
-greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,64,,
-greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,65,,
-greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,66,,
-greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,67,,
+Handlungsfeldes. <br /></p>",1,,,,0,null,,157,,
 greta-ka02-kb01,greta-ka02-kb01-kf03,"Curriculare und institutionelle Rahmenbedingungen","<p dir=""ltr"" style=""text-align:left;"">Lehrende müssen sich mit den Anforderungen der 
 Weiterbildungseinrichtungen auseinandersetzen, für die sie tätig sind. 
 Im Gegensatz zu anderen Bildungsbereichen gibt es in der 
@@ -313,13 +265,9 @@ Softwarenutzung, die einrichtungsinternen Rahmenlehrpläne bzw.
 Modulpläne (u. a. Hinweise zur Gestaltung von Lernumgebungen, Aspekte 
 der Qualitätssicherung, Erstellung und Abnahme von Prüfungen) sowie 
 dazugehörige Beratungs- und Supportkapazitäten des spezifischen 
-Weiterbildungsfeldes und der Weiterbildungseinrichtung zu kennen. <br /></p>",1,,,,0,null,,68,,
-greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,69,,
-greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,70,,
-greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,71,,
-greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-l04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,72,,
-,greta-ka03,"Professionelle Werthaltungen und Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Werthaltungen und Überzeugungen<br /></p>",1,,,,0,null,,73,,
-greta-ka03,greta-ka03-kb01,Berufsethos,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsethos<br /></p>",1,,,,0,null,,74,,
+Weiterbildungsfeldes und der Weiterbildungseinrichtung zu kennen. <br /></p>",1,,,,0,null,,158,,
+,greta-ka03,"Professionelle Werthaltungen und Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Werthaltungen und Überzeugungen<br /></p>",1,,,,0,null,,159,,
+greta-ka03,greta-ka03-kb01,Berufsethos,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsethos<br /></p>",1,,,,0,null,,160,,
 greta-ka03-kb01,greta-ka03-kb01-kf01,Menschenbilder,"<p dir=""ltr"" style=""text-align:left;"">Die Kompetenzfacette Menschenbilder umfasst die eigenen Vorstellungen,
  die Lehrende über Menschen und damit auch über ihre Teilnehmenden 
 haben. Die Lehrenden haben ein bestimmtes Menschenbild, das ihre 
@@ -330,11 +278,7 @@ psycho-dynamische Menschenbild. Lehrende sollten den Lernenden ein
 Menschenbild vorleben, das zur Selbstentfaltung und Selbstverwirklichung
  anregt. Darüber hinaus müssen Lehrende sich über den Einfluss des 
 Menschenbildes auf den Lehr-Lern-Prozess und dessen Qualität bewusst 
-sein.<br /></p>",1,,,,0,null,,75,,
-greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,76,,
-greta-ka03-kb01-kf01," greta-ka03-kb01-kf01-l06","Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,77,,
-greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,78,,
-greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,79,,
+sein.<br /></p>",1,,,,0,null,,161,,
 greta-ka03-kb01,greta-ka03-kb01-kf02,Wertvorstellungen,"<p dir=""ltr"" style=""text-align:left;"">Das professionelle Handeln Lehrender basiert auf persönlichen 
 Wertvorstellungen, die das eigene professionelle Handeln prägen und 
 beeinflussen. Diese Vorstellungen beinhalten Haltungen, Einstellungen 
@@ -346,12 +290,8 @@ Wertvorstellungen Lehrender sind auch dadurch geprägt, dass Lehrende ein
  Bewusstsein für das Wohlergehen der Teilnehmenden haben und dafür die 
 Verantwortung tragen. Auch der Verinnerlichung von berufsethischen 
 Standards und Prinzipien kommt für das professionelle Handeln von 
-Lehrenden eine Bedeutung zu. <br /></p>",1,,,,0,null,,80,,
-greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,81,,
-greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,82,,
-greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,83,,
-greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,84,,
-greta-ka03,greta-ka03-kb02,"Berufsbezogene Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsbezogene Überzeugungen<br /></p>",1,,,,0,null,,85,,
+Lehrenden eine Bedeutung zu. <br /></p>",1,,,,0,null,,162,,
+greta-ka03,greta-ka03-kb02,"Berufsbezogene Überzeugungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufsbezogene Überzeugungen<br /></p>",1,,,,0,null,,163,,
 greta-ka03-kb02,greta-ka03-kb02-kf01,"Eigenes Rollenbewusstsein","<p dir=""ltr"" style=""text-align:left;"">Die Lehrtätigkeit hat sich in den vergangenen Jahrzehnten gewandelt. Die
  traditionelle Rolle als Informationsvermittlerin oder 
 Informationsvermittler ist in den Hintergrund getreten. Vielmehr haben 
@@ -371,11 +311,7 @@ sie reagieren. Neben einem Bewusstsein für die eigene Rolle und der
 Identifikation mit dieser ist es aber auch wichtig, bei Bedarf je nach 
 Lehr-Lern-Situation (Begleiten, Wissen vermitteln etc.) und 
 Lehr-Lern-Setting (hybrid, Präsenz, digital) flexibel zwischen 
-unterschiedlichen Rollen wechseln zu können.<br /></p>",1,,,,0,null,,86,,
-greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,87,,
-greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,88,,
-greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,89,,
-greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,90,,
+unterschiedlichen Rollen wechseln zu können.<br /></p>",1,,,,0,null,,164,,
 greta-ka03-kb02,greta-ka03-kb02-kf02,"Subjektive Annahmen über das Lehren und Lernen","<p dir=""ltr"" style=""text-align:left;"">Lehrende haben konkrete Vorstellungen  – sogenannte subjektive Annahmen 
  – darüber, wie das Lernen und Lehren funktioniert und gestaltet werden 
 sollte. Diese subjektiven Annahmen lassen sich in konstruktivistische 
@@ -394,13 +330,9 @@ Vorstellungen über das Lehren und Lernen beeinflussen die Qualität der
 Lehr-Lern-Prozesse, wobei konstruktivistische subjektive Theorien 
 positiver für die Qualität von Lehr-Lern-Prozessen sind. Lehrende 
 sollten sich ihrer subjektiven Annahmen und deren Einfluss auf den 
-Lehr-Lern-Prozess bewusst sein.<br /></p>",1,,,,0,null,,91,,
-greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,92,,
-greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,93,,
-greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,94,,
-greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,95,,
-,greta-ka04,"Professionelle Selbststeuerung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Selbststeuerung<br /></p>",1,,,,0,null,,96,,
-greta-ka04,greta-ka04-kb01,"Motivationale Orientierungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Motivationale Orientierungen<br /></p>",1,,,,0,null,,97,,
+Lehr-Lern-Prozess bewusst sein.<br /></p>",1,,,,0,null,,165,,
+,greta-ka04,"Professionelle Selbststeuerung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Professionelle Selbststeuerung<br /></p>",1,,,,0,null,,166,,
+greta-ka04,greta-ka04-kb01,"Motivationale Orientierungen","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Motivationale Orientierungen<br /></p>",1,,,,0,null,,167,,
 greta-ka04-kb01,greta-ka04-kb01-kf01,Selbstwirksamkeitsüberzeugungen,"<p dir=""ltr"" style=""text-align:left;"">Unter Selbstwirksamkeit wird die Überzeugung verstanden, über die 
 Fähigkeiten und Mittel zu verfügen, die für die erfolgreiche Bewältigung
  gegebener Anforderungen oder für eine Zielerreichung notwendig sind. 
@@ -412,23 +344,15 @@ Selbstwirksamkeitsüberzeugungen beeinflussen u. a. die Ansprüche, die
 Lehrende an ihr eigenes erwachsenenpädagogisches Handeln stellen. Sie 
 sind auch eng verknüpft mit der Wahrnehmung von Erfolg, Misserfolg und 
 Belastungen. Eine hohe Selbstwirksamkeit ist gekennzeichnet durch 
-zielgerichtetes Handeln auch unter herausfordernden Bedingungen.<br /></p>",1,,,,0,null,,98,,
-greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,99,,
-greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,100,,
-greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,101,,
-greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,102,,
+zielgerichtetes Handeln auch unter herausfordernden Bedingungen.<br /></p>",1,,,,0,null,,168,,
 greta-ka04-kb01,greta-ka04-kb01-kf02,Enthusiasmus,"<p dir=""ltr"" style=""text-align:left;"">Enthusiasmus bezeichnet den Grad des positiven emotionalen Erlebens 
 während der Ausübung der Lehrtätigkeit. Hierzu gehören die Freude an der
  Tätigkeit sowie die Tatsache, dass Lehrende aus eigenem Interesse 
 heraus handeln – frei von externem Druck oder Kontrolle.  Enthusiasmus 
 als motivationale Orientierung meint das persönliche Engagement und die 
 Begeisterungsfähigkeit von Lehrenden für ihr Fach und die Lehrtätigkeit 
-als solche.<br /></p>",1,,,,0,null,,103,,
-greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,104,,
-greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,105,,
-greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,106,,
-greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,107,,
-greta-ka04,greta-ka04-kb02,Selbstregulation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Selbstregulation<br /></p>",1,,,,0,null,,108,,
+als solche.<br /></p>",1,,,,0,null,,169,,
+greta-ka04,greta-ka04-kb02,Selbstregulation,"<p dir=""ltr"" style=""text-align:left;"">Beschreibung Selbstregulation<br /></p>",1,,,,0,null,,170,,
 greta-ka04-kb02,greta-ka04-kb02-kf01,"Umgang mit Feedback und Kritik","<p dir=""ltr"" style=""text-align:left;"">Feedback und Kritik nehmen in Lehr-Lern-Situationen eine besondere Rolle
  ein. Dabei ist neben dem Erteilen von Feedback für Lehrende auch der 
 Umgang mit Feedback oder Kritik bezogen auf die eigene Person und das 
@@ -440,11 +364,7 @@ Lösen von Problemen und Konflikten. Ebenfalls von Bedeutung für die
 Wirkung von Feedback und Kritik ist das Medium, durch welches Feedback 
 kommuniziert wird. Eine Feedback- und Kritikfähigkeit ermöglicht einen 
 produktiven Umgang mit Irritationen und kann eine nachhaltige 
-Selbstreflexion ermöglichen.<br /></p>",1,,,,0,null,,109,,
-greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,110,,
-greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,111,,
-greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,112,,
-greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,113,,
+Selbstreflexion ermöglichen.<br /></p>",1,,,,0,null,,171,,
 greta-ka04-kb02,greta-ka04-kb02-kf02,"Engagement und Distanz","<p dir=""ltr"" style=""text-align:left;"">Die Fähigkeit der Selbstregulation zeigt sich im verantwortungsvollen 
 Umgang mit den eigenen Ressourcen. Damit ist ein ausgewogenes Maß an 
 Engagement und Distanzierungsfähigkeit bezogen auf die Tätigkeit 
@@ -457,12 +377,8 @@ Herausforderungen in ihrem pädagogischen Handeln effektiv umzugehen. Die
  Fähigkeit, mit den eigenen Ressourcen gesund zu haushalten, wirkt sich 
 dabei sowohl auf die Qualität der Lehr-Lern-Prozesse als auch auf das 
 berufliche Wohlbefinden der Lehrenden aus, wovon letztendlich auch die 
-Teilnehmenden profitieren.<br /></p>",1,,,,0,null,,114,,
-greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,115,,
-greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,116,,
-greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,117,,
-greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,118,,
-greta-ka04,greta-ka04-kb03,"Berufspraktische Erfahrung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufspraktische Erfahrung<br /></p>",1,,,,0,null,,119,,
+Teilnehmenden profitieren.<br /></p>",1,,,,0,null,,172,,
+greta-ka04,greta-ka04-kb03,"Berufspraktische Erfahrung","<p dir=""ltr"" style=""text-align:left;"">Beschreibung Berufspraktische Erfahrung<br /></p>",1,,,,0,null,,173,,
 greta-ka04-kb03,greta-ka04-kb03-kf01,"Reflexion des eigenen Lehrhandelns","<p dir=""ltr"" style=""text-align:left;"">Um immer wieder angemessenes und innovatives Lehrhandeln zeigen zu 
 können, ist es erforderlich, dass Lehrende ihr professionelles Handeln 
 selbst reflektieren. Hierzu gehört auch, sich in die Teilnehmenden 
@@ -475,11 +391,7 @@ ein bewusstes Überlegen bzw. Reflektieren während oder nach einer
 Handlungssituation. Lehrende sollten in der Lage sein und die 
 Bereitschaft zeigen, ein solch reflektiertes Nachdenken aktiv zu 
 betreiben. Eine Reflexion des Lehrhandelns kann in offener Form und in 
-strukturierter Weise allein oder mit Unterstützung Dritter erfolgen.<br /></p>",1,,,,0,null,,120,,
-greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,121,,
-greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,122,,
-greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,123,,
-greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,124,,
+strukturierter Weise allein oder mit Unterstützung Dritter erfolgen.<br /></p>",1,,,,0,null,,174,,
 greta-ka04-kb03,greta-ka04-kb03-kf02,"Berufliche Weiterentwicklung","<p dir=""ltr"" style=""text-align:left;"">Fachinhalte und professionelles Handlungswissen verändern sich unter dem
  Einfluss gesamtgesellschaftlicher Entwicklungen. Zum Teil finden diese 
 Veränderungen, wie am Beispiel der Digitalisierung deutlich wird, mit 
@@ -493,8 +405,96 @@ kritische Auseinandersetzung damit in Bezug auf die eigene Person und
 die eigene berufliche Tätigkeit. Erforderlich sind ein Bewusstsein für 
 die Notwendigkeit solcher beruflichen Weiterentwicklungen wie auch die 
 Bereitschaft, die eigenen Kompetenzentwicklungsbedarfe festzustellen und
- sich kontinuierlich weiterzuentwickeln.<br /></p>",1,,,,0,null,,125,,
-greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l05,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,126,,
-greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l06,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,127,,
-greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l07,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,128,,
-greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-l08,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,129,,
+ sich kontinuierlich weiterzuentwickeln.<br /></p>",1,,,,0,null,,175,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,176,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,177,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,178,,
+greta-ka01-kb01-kf01,greta-ka01-kb01-kf01-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,179,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen</p>",1,,,,0,null,,180,,
+greta-ka01-kb01-kf02,greta-ka01-kb01-kf02-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,181,,
+greta-ka01-kb01-kf02," greta-ka01-kb01-kf02-lk03","Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,182,,
+greta-ka01-kb01-kf02," greta-ka01-kb01-kf02-lk04","Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,183,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,184,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,185,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,186,,
+greta-ka01-kb01-kf03,greta-ka01-kb01-kf03-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,187,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-lk01,"Kennen und verstehen","Inhalte wiedergeben und einordnen",1,,,,0,null,,188,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,189,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,190,,
+greta-ka01-kb01-kf04,greta-ka01-kb01-kf04-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,191,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,192,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,193,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,194,,
+greta-ka01-kb02-kf01,greta-ka01-kb02-kf01-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,195,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,196,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,197,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,198,,
+greta-ka01-kb02-kf02,greta-ka01-kb02-kf02-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,199,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,200,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,201,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,202,,
+greta-ka01-kb03-kf01,greta-ka01-kb03-kf01-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,203,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,204,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,205,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,206,,
+greta-ka01-kb03-kf02,greta-ka01-kb03-kf02-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,207,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,208,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,209,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,210,,
+greta-ka01-kb04-kf01,greta-ka01-kb04-kf01-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,211,,
+greta-ka01-kb04-kf02," greta-ka01-kb04-kf02-lk01","Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,212,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,213,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,214,,
+greta-ka01-kb04-kf02,greta-ka01-kb04-kf02-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,215,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,216,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,217,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,218,,
+greta-ka02-kb01-kf01,greta-ka02-kb01-kf01-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,219,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,220,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,221,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,222,,
+greta-ka02-kb01-kf02,greta-ka02-kb01-kf02-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,223,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-lk01,"Kennen und verstehen","<p dir=""ltr"" style=""text-align:left;"">Inhalte wiedergeben und einordnen<br /></p>",1,,,,0,null,,224,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-lk02,"Anwenden und umsetzen","<p dir=""ltr"" style=""text-align:left;"">Inhalte anwenden und Vorgehensweisen umsetzen<br /></p>",1,,,,0,null,,225,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-lk03,"Analysieren und beurteilen","<p dir=""ltr"" style=""text-align:left;"">Zusammenhänge und Situationen deuten und bewerten<br /></p>",1,,,,0,null,,226,,
+greta-ka02-kb01-kf03,greta-ka02-kb01-kf03-lk04,"Weiterentwickeln und kreieren","<p dir=""ltr"" style=""text-align:left;"">Inhalte aufeinander beziehen und Situationen neu gestalten<br /></p>",1,,,,0,null,,227,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,228,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,229,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,230,,
+greta-ka03-kb01-kf01,greta-ka03-kb01-kf01-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,231,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,232,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,233,,
+greta-ka03-kb01-kf02,greta-ka03-kb01-kf02-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,234,,
+greta-ka03-kb01-kf02," greta-ka03-kb01-kf02-la04","Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,235,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,236,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,237,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,238,,
+greta-ka03-kb02-kf01,greta-ka03-kb02-kf01-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,239,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,240,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,241,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,242,,
+greta-ka03-kb02-kf02,greta-ka03-kb02-kf02-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,243,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,244,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,245,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,246,,
+greta-ka04-kb01-kf01,greta-ka04-kb01-kf01-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,247,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,248,,
+greta-ka04-kb01-kf02," greta-ka04-kb01-kf02-la02","Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,249,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,250,,
+greta-ka04-kb01-kf02,greta-ka04-kb01-kf02-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,251,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,252,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,253,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,254,,
+greta-ka04-kb02-kf01,greta-ka04-kb02-kf01-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,255,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,256,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,257,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,258,,
+greta-ka04-kb02-kf02,greta-ka04-kb02-kf02-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,259,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,260,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,261,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,262,,
+greta-ka04-kb03-kf01,greta-ka04-kb03-kf01-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,263,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-la01,"Wahrnehmen und beachten","<p dir=""ltr"" style=""text-align:left;"">Auf etwas aufmerksam werden und sich etwas widmen<br /></p>",1,,,,0,null,,264,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-la02,"Aufgreifen und reagieren","<p dir=""ltr"" style=""text-align:left;"">Für etwas bereit sein und daran interessiert sein<br /></p>",1,,,,0,null,,265,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-la03,"Abwägen und werten","<p dir=""ltr"" style=""text-align:left;"">Ein individuelles Wertesystem aufbauen und Beurteilungsmaßstäbe finden<br /></p>",1,,,,0,null,,266,,
+greta-ka04-kb03-kf02,greta-ka04-kb03-kf02-la04,"Verinnerlichen und intuitiv anwenden","<p dir=""ltr"" style=""text-align:left;"">Ein eigenes Wertesystem zu Grunde legen und konsistent nach dessen Grundsätzen handeln<br /></p>",1,,,,0,null,,267,,

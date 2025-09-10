@@ -45,7 +45,7 @@
               "educationalFramework": "GRETA",
               "educationalFrameworkVersion": "2.0",
               "type": "EducationalLevel",
-              "shortCode": "1"
+              "shortCode": "lk01"
 
             }
           },
@@ -70,7 +70,7 @@
               "educationalFramework": "GRETA",
               "educationalFrameworkVersion": "2.0",
               "type": "EducationalLevel",
-              "shortCode": "2"
+              "shortCode": "lk02"
 
             }
           },
@@ -95,7 +95,7 @@
               "educationalFramework": "GRETA",
               "educationalFrameworkVersion": "2.0",
               "type": "EducationalLevel",
-              "shortCode": "1"
+              "shortCode": "lk01"
 
             }
           },
@@ -120,7 +120,7 @@
               "educationalFramework": "GRETA",
               "educationalFrameworkVersion": "2.0",
               "type": "EducationalLevel",
-              "shortCode": "1"
+              "shortCode": "lk01"
 
             }
           }

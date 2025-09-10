@@ -320,7 +320,7 @@ if (!isset($metarecords) or empty($metarecords)) {
                 $teaches['educationalFrameworkVersion'] = $competency->frameworkversion;
 
                 $levelshortcode = $last = substr(strrchr($facetLevelShortcode, '-l0'), 1); // 'l01'
-                $levelshortcode = substr(trim($facetLevelShortcode), -1);
+                $levelshortcode = substr(trim($facetLevelShortcode), -4);
 
                 $teaches['educationalLevel']["shortCode"] = $levelshortcode ?? null;
 
