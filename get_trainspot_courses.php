@@ -298,7 +298,7 @@ if (!isset($metarecords) or empty($metarecords)) {
 
                 $facetLevelShortcode = $competency->idnumber; //GRETA facet level e.g. greta-ka01-kb01-kf01-l01
 
-                $facetShortcode = preg_replace('/-l\d+$/', '', $facetLevelShortcode); //remove level part e.g. greta-ka01-kb01-kf01
+                $facetShortcode = preg_replace('/-l[a-z]*\d+$/', '', $facetLevelShortcode); //remove level part e.g. greta-ka01-kb01-kf01
                 $teaches['shortCode'] = $facetShortcode ?? null;
                 $facetdata = greta_get_attributes_from_json("ressources/GRETA/greta-shortcodes.json", $facetShortcode);
                 //var_dump($facetdata);
@@ -344,7 +344,7 @@ if (!isset($metarecords) or empty($metarecords)) {
             $duration = 'PT' . $meta->processingtime . 'H';
             $metaentry['attributes']['duration'] = $duration;
         } else {
-            $metaentry['attributes']['duration'] = 'PT0H'; 
+            $metaentry['attributes']['duration'] = 'PT0H';
         }
 
         // Set course provider.
