@@ -469,17 +469,19 @@ function get_nbp_token($tokenFile, $clientId, $clientSecret) {
 }
 
 
-function return_token($clientId,$clientSecret) {
+function return_token($baseurl, $clientId, $clientSecret) {
     //TODO: URL anpassen, passt derzeit nicht mit URL aus DB zusammen
-    $url = "https://aai.demo.meinbildungsraum.de/realms/nbp-aai/protocol/openid-connect/token";
-    $credentials = base64_encode("$clientId:$clientSecret");
+    $url =  $baseurl . "/auth/password";
+    $payload = json_encode([
+        'username' => $clientId,
+        'password' => $clientSecret,
+    ]);
 
     $curl = curl_init($url);
     curl_setopt($curl, CURLOPT_POST, true);
-    curl_setopt($curl, CURLOPT_POSTFIELDS, "grant_type=client_credentials");
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $payload);
     curl_setopt($curl, CURLOPT_HTTPHEADER, [
-        "Authorization: Basic $credentials",
-        "Content-Type: application/x-www-form-urlencoded"
+        "Content-Type: application/json"
     ]);
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
@@ -488,7 +490,7 @@ function return_token($clientId,$clientSecret) {
 
     if ($statusCode < 400) {
         $data = json_decode($response, true);
-        return $data["access_token"]; 
+        return $data["access_token"];
     } else {
         // Fehlerbehandlung
         echo "Fehler beim Abrufen des Tokens: HTTP-Status $statusCode\n";
