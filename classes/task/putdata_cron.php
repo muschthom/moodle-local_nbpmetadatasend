@@ -68,7 +68,7 @@ function start_putdata_process() {
 
     $courseIds = get_courseIds();
 
-    $token = return_token($clientid, $clientsecret);
+    $token = return_token($baseurl, $clientid, $clientsecret);
 
     $systemUrl = $CFG->wwwroot;
     $url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';

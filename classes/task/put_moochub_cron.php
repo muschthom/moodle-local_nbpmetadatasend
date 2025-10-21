@@ -63,8 +63,7 @@ function start_put_moochub_data_process() {
 
     $courseIds = get_courseIds();
 
-    $token = return_token($clientid, $clientsecret);
-
+    $token = return_token($baseurl, $clientid, $clientsecret);
     $systemUrl = $CFG->wwwroot;
     //$url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';
     $url = $systemUrl . '/local/nbpmetadatasend/get_trainspot_courses.php';
@@ -83,8 +82,7 @@ function start_put_moochub_data_process() {
         $json_data = json_encode($result);
 
         echo $json_data; 
-        $url = $baseurl . '/api/moochub/' . $sourceslug;
-
+        $url = $baseurl . '/push-connector/api/moochub/' . $sourceslug;
         $ch = curl_init($url);
 
         // Optionen für cURL setzen
