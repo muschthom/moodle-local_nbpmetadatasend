@@ -36,6 +36,13 @@ if ($hassiteconfig) {
 	// Create 
 	$ADMIN->add('localplugins', $settings);
 
+	// Add external management page
+	$ADMIN->add('localplugins', new admin_externalpage(
+		'local_nbpmetadatasend_manage',
+		get_string('managepage', 'local_nbpmetadatasend'),
+		new moodle_url('/local/nbpmetadatasend/manage.php')
+	));
+
 	// Add a setting field to the settings for this page
 	$settings->add(new admin_setting_configtext(
 
@@ -116,23 +123,12 @@ if ($hassiteconfig) {
 
 	));
 
-	// Add a setting field to the settings for this page
-	$settings->add(new admin_setting_configtext(
-
-		// This is the reference you will use to your configuration
-		'local_nbpmetadatasend_courseIds',
-
-		// This is the friendly title for the config, which will be displayed
-		'Course Ids',
-
-		// This is helper text for this config field
-		'Ids der Kurse, deren Metadaten an den Datenraum gesendet werden sollen. Format "KursID","KursID",... z.B. 1,2,3',
-
-		// This is the default value
-		'1,2,5',
-
-		// This is the type of Parameter this config is
-		PARAM_TEXT
-
+	// Add a link to the custom page
+	$url = new moodle_url('/local/nbpmetadatasend/manage.php');
+	$link = html_writer::link($url, get_string('managepage', 'local_nbpmetadatasend'));
+	$settings->add(new admin_setting_heading(
+		'local_nbpmetadatasend_managepage',
+		'',
+		$link
 	));
 }

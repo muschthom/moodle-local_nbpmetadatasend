@@ -529,3 +529,299 @@ function greta_get_attributes_from_json(string $filepath, string $shortcode): ?a
     // nicht gefunden
     return null;
 }
+
+/**
+ * Get course metadata for given course IDs - similar to get_course_isymetadata but returns UUIDs
+ */
+function get_course_metadata($courseids) {
+    global $DB;
+    $results = [];
+
+    foreach ($courseids as $courseid) {
+        // Trim leere Zeichen und prüfe, ob der courseid eine gültige Ganzzahl ist
+        $courseid = trim($courseid);
+
+        // Prüfen, ob courseid nur aus Ziffern besteht und positiv ist
+        if (!ctype_digit($courseid) || (int)$courseid <= 0) {
+            // Wenn ungültig, überspringe diesen Wert
+            continue;
+        }
+
+        // SQL-Abfrage vorbereiten - select only uuid and courseid
+        $sql = "SELECT courseid, uuid FROM {ildmeta} WHERE courseid = :courseid";
+
+        // Die Abfrage durchführen
+        $result = $DB->get_record_sql($sql, array('courseid' => $courseid));
+        if ($result) {
+            $results[] = [$result]; // Wrap in array to match expected structure
+        }
+    }
+    return $results;
+}
+
+/**
+ * Start getdata process with course IDs from input field
+ */
+function get_metadata_from_slug() {
+    ob_start(); // Start output buffering to capture echo statements
+
+    $slug = get_source_slug();
+    echo "Starting getdata process from slug: " . $slug . "\n";
+
+    $baseurl = get_baseurl();
+    $clientid = get_clientid();
+    $clientsecret = get_clientsecret();
+
+    if (!$slug) {
+        echo "No slug defined.\n";
+        return ob_get_clean();
+    }
+
+    // Get token with error handling
+    $token = return_token($baseurl, $clientid, $clientsecret);
+    if (!$token) {
+        echo "Failed to get authentication token.\n";
+        return ob_get_clean();
+    }
+
+    $url = $baseurl . '/push-connector/api/moochub/sources/' . $slug;
+    echo "Requesting URL: " . $url . "\n";
+
+    $ch = curl_init($url);
+
+    // Optionen für cURL setzen
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        'accept: application/json',
+        'Authorization: Bearer ' . $token
+    ]);
+
+    // Anfrage ausführen und Antwort speichern
+    $response = curl_exec($ch);
+    $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $error = curl_error($ch);
+    curl_close($ch);
+
+    // Fehlerbehandlung
+    if ($error) {
+        echo "cURL Error: " . $error . "\n";
+        return ob_get_clean();
+    }
+
+    echo "HTTP Status Code: " . $http_status . "\n";
+    echo "Response from NBP:\n";
+    echo $response . "\n";
+    echo "Getdata process completed successfully.\n";
+
+    return ob_get_clean(); // Return all captured output
+}
+
+
+function put_metadata_to_slug($inputvalue_putdata) {
+    ob_start(); // Start output buffering to capture echo statements
+
+    require_once(__DIR__ . '/../../config.php');
+    global $CFG, $DB;
+
+    $baseurl = get_baseurl();
+
+    $sourceslug = get_source_slug();
+
+    $clientid = get_clientid();
+
+    $clientsecret = get_clientsecret();
+
+    $courseIds = $inputvalue_putdata;
+
+    // Convert string to array if necessary
+    if (is_string($courseIds)) {
+        $courseidsArray = [];
+        // Umwandeln des Strings in ein Array
+        if (strpos($courseIds, ',') !== false) {
+            $courseidsArray = explode(",", $courseIds);
+        } else {
+            $courseidsArray = [$courseIds];
+        }
+
+        $final_courseidsArray = [];
+        foreach ($courseidsArray as $courseid) {
+            // Trim leere Zeichen und prüfe, ob der courseid eine gültige Ganzzahl ist
+            $courseid = trim($courseid);
+
+            // Prüfen, ob courseid nur aus Ziffern besteht und positiv ist
+            if (!ctype_digit($courseid) || (int)$courseid <= 0) {
+                // Wenn ungültig, überspringe diesen Wert
+                continue;
+            }
+            $final_courseidsArray[] = $courseid;
+        }
+        $courseIds = $final_courseidsArray;
+    }
+
+    $token = return_token($baseurl, $clientid, $clientsecret);
+    $systemUrl = $CFG->wwwroot;
+    //$url = $systemUrl . '/local/ildmeta/get_moochub_courses.php';
+    $url = $systemUrl . '/local/nbpmetadatasend/get_trainspot_courses.php';
+
+
+    $uuids = get_uuids_by_courseids($courseIds);
+
+    $filteredCourses = getFilteredCoursesData($url, $uuids);
+
+    if (!$filteredCourses) {
+        echo "No courses found with the given courseIds.";
+    }
+
+    foreach ($filteredCourses as $result) {
+
+        $json_data = json_encode($result);
+
+        echo $json_data;
+        $url = $baseurl . '/push-connector/api/moochub/' . $sourceslug;
+        $ch = curl_init($url);
+
+        // Optionen für cURL setzen
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT"); // Methode: PUT
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true); // Antwort als String zurückgeben
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'accept: */*',
+            'Authorization: Bearer ' . $token, // Ersetze "xxx" durch deinen echten Token
+            'Content-Type: application/json'
+        ]);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $json_data); // JSON-Daten senden
+
+        // Anfrage ausführen und Antwort speichern
+        $response = curl_exec($ch);
+
+        // Fehler prüfen
+        if (curl_errno($ch)) {
+            echo 'cURL-Fehler: ' . curl_error($ch);
+        }
+
+        $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        //echo "HTTP Status Code: " . $http_status . "\n";
+
+        if ($http_status == 204) {
+            echo "Metadata successfully saved/updated for course " . $result["attributes"]["name"] .
+                " with uuid = " . $result['id'] .  "\n";
+        }
+
+        // cURL-Session schließen
+        curl_close($ch);
+        // Auf Fehler überprüfen und Antwort verarbeiten
+        if ($err) {
+            echo "cURL Error #: " . $err;
+        } else {
+            echo "HTTP Status Code: " . $http_status . "\n";
+        }
+    }
+
+    return ob_get_clean(); // Return all captured output
+}
+
+
+function delete_metadata_to_slug($inputvalue_deletedata) {
+    ob_start(); // Start output buffering to capture echo statements
+
+    echo "Starting delete process...\n";
+    $baseurl = get_baseurl();
+    echo "Base URL: " . $baseurl . "\n";
+
+    $sourceslug = get_source_slug();
+    echo "Source slug: " . $sourceslug . "\n";
+
+    $clientid = get_clientid();
+    $clientsecret = get_clientsecret();
+
+    $courseIds = $inputvalue_deletedata;
+
+    // Convert string to array if necessary
+    if (is_string($courseIds)) {
+        $courseidsArray = [];
+        // Umwandeln des Strings in ein Array
+        if (strpos($courseIds, ',') !== false) {
+            $courseidsArray = explode(",", $courseIds);
+        } else {
+            $courseidsArray = [$courseIds];
+        }
+
+        $final_courseidsArray = [];
+        foreach ($courseidsArray as $courseid) {
+            // Trim leere Zeichen und prüfe, ob der courseid eine gültige Ganzzahl ist
+            $courseid = trim($courseid);
+
+            // Prüfen, ob courseid nur aus Ziffern besteht und positiv ist
+            if (!ctype_digit($courseid) || (int)$courseid <= 0) {
+                // Wenn ungültig, überspringe diesen Wert
+                continue;
+            }
+            $final_courseidsArray[] = $courseid;
+        }
+        $courseIds = $final_courseidsArray;
+    }
+
+    // Use return_token instead of get_nbp_token for consistency
+    $token = return_token($baseurl, $clientid, $clientsecret);
+    if (!$token) {
+        echo "Failed to get authentication token.\n";
+        return ob_get_clean();
+    }
+    $results = get_course_metadata($courseIds);
+
+    if (empty($results)) {
+        echo "No course metadata found for the provided IDs.\n";
+        return ob_get_clean();
+    }
+
+    foreach ($results as $result) {
+        foreach ($result as $object) {
+            // Zugriff auf die UUID (corrected from deletedata_cron.php logic)
+            if (isset($object->uuid)) {
+                $uuid = $object->uuid;
+                echo "Deleting UUID: " . $uuid . "\n";
+
+                // Use correct URL format like in deletedata_cron.php
+                $url = $baseurl . '/push-connector/api/moochub/' . $sourceslug . '/' . $uuid;
+
+                echo "Request URL: " . $url . "\n";
+
+                $ch = curl_init();
+
+                // cURL-Optionen für DELETE-Request
+                curl_setopt($ch, CURLOPT_URL, $url);
+                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+                curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
+                curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                    'accept: */*',
+                    'Authorization: Bearer ' . $token, // Ersetze "xxx" durch deinen echten Token
+                    'Content-Type: application/json'
+                ]);
+
+                // Anfrage ausführen
+                $response = curl_exec($ch);
+                $err = curl_error($ch);
+                $http_status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+                curl_close($ch);
+
+                // Fehlerbehandlung und Antwort verarbeiten
+                if ($err) {
+                    echo "cURL Error: " . $err . "\n";
+                } else {
+                    echo "HTTP Status Code: " . $http_status . "\n";
+                    if ($http_status == 204 || $http_status == 200) {
+                        echo "Successfully deleted metadata for UUID: " . $uuid . "\n";
+                    } else {
+                        echo "Failed to delete metadata for UUID: " . $uuid . "\n";
+                    }
+                    if (!empty($response)) {
+                        echo "Response: " . $response . "\n";
+                    }
+                }
+            }
+        }
+    }
+
+    echo "Delete process completed.\n";
+    return ob_get_clean(); // Return all captured output
+}

@@ -27,5 +27,21 @@ $string['put_data_cron'] = 'Put Data to NBP Cron';
 $string['put_moochub_cron'] = 'Put Moochub data to NBP Cron';
 $string['get_data_cron'] = 'Get Data From NBP Cron';
 $string['delete_data_cron'] = 'Delete Data From NBP Cron';
+$string['managepage'] = 'Manage NBP Metadata';
+$string['managepageheading'] = 'NBP Metadata Management';
+$string['inputlabel'] = 'Course IDs (comma-separated, e.g. 1,2,3)';
+$string['inputlabel_deletedata'] = 'Course IDs to delete (comma-separated, e.g. 1,2,3)';
+$string['submitbutton'] = 'Execute Get Data Process';
+$string['submitbuttongetdata'] = 'Execute Get Data Process';
+$string['submitbuttonputdata'] = 'Execute Put Data Process';
+$string['submitbuttondeletedata'] = 'Execute Delete Data Process';
+$string['datasaved'] = 'Process executed successfully';
+$string['inputrequired'] = 'Please enter course IDs';
+$string['getdataprocessdesc'] = 'Bei Klick auf den Button werden alle Kurse abgerufen, die im Datenraum für die slug (siehe nbpmetadata settings Feld) eingetragen sind.';
+$string['getdataprocessheading'] = 'Get Data from NBP';
+$string['putdataprocessheading'] = 'Put Data to NBP';
+$string['putdataprocessdesc'] = 'Send metadata for specific courses to the NBP data space.';
+$string['deletedataprocessheading'] = 'Delete Data from NBP';
+$string['deletedataprocessdesc'] = 'Delete metadata for specific courses from the NBP data space.';
 
 
