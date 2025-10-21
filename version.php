@@ -25,7 +25,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2025011401; // The current plugin version (Date: YYYYMMDDXX).
+$plugin->version   = 2025102101; // The current plugin version (Date: YYYYMMDDXX).
 $plugin->requires  = 2020041200; // Requires this Moodle version.
 $plugin->component = 'local_nbpmetadatasend'; // Full name of the plugin (used for diagnostics)
 
