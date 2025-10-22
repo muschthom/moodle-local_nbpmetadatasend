@@ -8,11 +8,16 @@
  * Source Slug (your institution)
  * Client Id (provided by Datenraum)
  * Client Secret (provided by Datenraum)
- * Course Ids (Ids of the courses that metadata will be send to Datenraum)
 
 
+# Manage Metadata
+The link to this page is /local/nbpmetadatasend/manage.php 
 
- Data will be send by cron job, so configure at /admin/tool/task/scheduledtasks.php and search for \local_nbpmetadatasend\task\put_moochub_cron
+or use the link at Plugins/Local Plugins/Manage NBP Metadata. You will find the following option: 
+* Metadata data retrieval from the Datenraum = get all metadata that is available at the source slug defined in the settings
+* Metadata data entry in the Datenraum = add new metadata for another course or update existing metadata by entering the course id and press the button "Start data entry process"
+* Metadata deletion from the Datenraum = delete metadata from the Datenraum by entering the course id of the course you want to delete metadata from and press the button "Start data deletion process"
+
 
 
  ## Information about the plugin

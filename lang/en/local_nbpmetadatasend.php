@@ -25,10 +25,10 @@
 $string['pluginname'] = 'NBP Metadata Management';
 $string['managepage'] = 'Manage NBP Metadata';
 $string['managepageheading'] = 'NBP Metadata Management';
-$string['inputlabel'] = '<ul> <li> Enter the IDs of the Moodle courses that are to be sent to the data room in the input field</li>
+$string['inputlabel'] = '<ul> <li> Enter the IDs of the Moodle courses that are to be sent to the Datenraum in the input field</li>
                         <li> The course ID can be found in the URL, e.g., course/view.php?id=<b>1</b> </li>
                                     <li> Enter the IDs separated by commas, e.g., 1,2,3</li> </ul>';
-$string['inputlabel_deletedata'] = '<ul> <li>Enter the course IDs of the Moodle courses that are to be deleted from the data room in the input field.</li>
+$string['inputlabel_deletedata'] = '<ul> <li>Enter the course IDs of the Moodle courses that are to be deleted from the Datenraum in the input field.</li>
                                     <li> The course ID can be found in the URL, e.g., course/view.php?id=<b>1</b> </li>
                                     <li> Enter the IDs separated by commas, e.g., 1,2,3</li> </ul>';
 $string['submitbuttongetdata'] = 'Start data retrieval process';
@@ -36,12 +36,12 @@ $string['submitbuttonputdata'] = 'Start data entry process';
 $string['submitbuttondeletedata'] = 'Start data deletion process';
 $string['datasaved'] = 'Process successfully executed';
 $string['inputrequired'] = 'Please enter course IDs';
-$string['getdataprocessdesc'] = 'Clicking on the button retrieves all courses that are entered in the data room for the slug (see nbpmetadata settings field).';
+$string['getdataprocessdesc'] = 'Clicking on the button retrieves all courses that are entered in the Datenraum for the slug (see nbpmetadata settings field).';
 $string['getdataprocessheading'] = 'Metadata data retrieval from the Datenraum';
 $string['putdataprocessheading'] = 'Metadata data entry in the  Datenraum';
-$string['putdataprocessdesc'] = 'Sending metadata for specific courses to the data room.';
-$string['deletedataprocessheading'] = 'Metadata deletion from the data room';
-$string['deletedataprocessdesc'] = 'Deleting metadata for specific courses from the data room.';
+$string['putdataprocessdesc'] = 'Sending metadata for specific courses to the Datenraum.';
+$string['deletedataprocessheading'] = 'Metadata deletion from the Datenraum';
+$string['deletedataprocessdesc'] = 'Deleting metadata for specific courses from the Datenraum.';
 $string['settingspagetitle'] = 'NBP Meta Data Send';
 
 $string['baseurl'] = 'Base URL';
