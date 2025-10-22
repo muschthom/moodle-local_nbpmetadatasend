@@ -22,26 +22,34 @@
  * @copyright   2023 ILD TH Lübeck <dev.ild@th-luebeck.de>
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-$string['pluginname'] = 'nbp meta data send';
-$string['put_data_cron'] = 'Put Data to NBP Cron';
-$string['put_moochub_cron'] = 'Put Moochub data to NBP Cron';
-$string['get_data_cron'] = 'Get Data From NBP Cron';
-$string['delete_data_cron'] = 'Delete Data From NBP Cron';
+$string['pluginname'] = 'NBP Metadata Management';
 $string['managepage'] = 'Manage NBP Metadata';
 $string['managepageheading'] = 'NBP Metadata Management';
-$string['inputlabel'] = 'Course IDs (comma-separated, e.g. 1,2,3)';
-$string['inputlabel_deletedata'] = 'Course IDs to delete (comma-separated, e.g. 1,2,3)';
-$string['submitbutton'] = 'Execute Get Data Process';
-$string['submitbuttongetdata'] = 'Execute Get Data Process';
-$string['submitbuttonputdata'] = 'Execute Put Data Process';
-$string['submitbuttondeletedata'] = 'Execute Delete Data Process';
-$string['datasaved'] = 'Process executed successfully';
+$string['inputlabel'] = '<ul> <li> Enter the IDs of the Moodle courses that are to be sent to the data room in the input field</li>
+                        <li> The course ID can be found in the URL, e.g., course/view.php?id=<b>1</b> </li>
+                                    <li> Enter the IDs separated by commas, e.g., 1,2,3</li> </ul>';
+$string['inputlabel_deletedata'] = '<ul> <li>Enter the course IDs of the Moodle courses that are to be deleted from the data room in the input field.</li>
+                                    <li> The course ID can be found in the URL, e.g., course/view.php?id=<b>1</b> </li>
+                                    <li> Enter the IDs separated by commas, e.g., 1,2,3</li> </ul>';
+$string['submitbuttongetdata'] = 'Start data retrieval process';
+$string['submitbuttonputdata'] = 'Start data entry process';
+$string['submitbuttondeletedata'] = 'Start data deletion process';
+$string['datasaved'] = 'Process successfully executed';
 $string['inputrequired'] = 'Please enter course IDs';
-$string['getdataprocessdesc'] = 'Bei Klick auf den Button werden alle Kurse abgerufen, die im Datenraum für die slug (siehe nbpmetadata settings Feld) eingetragen sind.';
-$string['getdataprocessheading'] = 'Get Data from NBP';
-$string['putdataprocessheading'] = 'Put Data to NBP';
-$string['putdataprocessdesc'] = 'Send metadata for specific courses to the NBP data space.';
-$string['deletedataprocessheading'] = 'Delete Data from NBP';
-$string['deletedataprocessdesc'] = 'Delete metadata for specific courses from the NBP data space.';
+$string['getdataprocessdesc'] = 'Clicking on the button retrieves all courses that are entered in the data room for the slug (see nbpmetadata settings field).';
+$string['getdataprocessheading'] = 'Metadata data retrieval from the Datenraum';
+$string['putdataprocessheading'] = 'Metadata data entry in the  Datenraum';
+$string['putdataprocessdesc'] = 'Sending metadata for specific courses to the data room.';
+$string['deletedataprocessheading'] = 'Metadata deletion from the data room';
+$string['deletedataprocessdesc'] = 'Deleting metadata for specific courses from the data room.';
+$string['settingspagetitle'] = 'NBP Meta Data Send';
 
+$string['baseurl'] = 'Base URL';
+$string['baseurldesc'] = 'Base address for all requests to the Datenraum';
+$string['sourceslug'] = 'Source Slug';
+$string['sourceslugdesc'] = 'Human-readable identifier of the data source for which learning opportunities are to be processed';
+$string['clientid'] = 'Client ID';
+$string['clientiddesc'] = 'Client ID for connecting to the Datenraum';
+$string['clientsecret'] = 'Client password';
+$string['clientsecretdesc'] = 'Password for connecting to the Datenraum';
 

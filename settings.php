@@ -31,7 +31,7 @@ if ($hassiteconfig) {
 	// Create the new settings page
 	// - in a local plugin this is not defined as standard, so normal $settings->methods will throw an error as
 	// $settings will be NULL
-	$settings = new admin_settingpage('local_nbpmetadatasend', 'NBP Meta Data Send');
+	$settings = new admin_settingpage('local_nbpmetadatasend', get_string('settingspagetitle', 'local_nbpmetadatasend'));
 
 	// Create 
 	$ADMIN->add('localplugins', $settings);
@@ -50,10 +50,10 @@ if ($hassiteconfig) {
 		'local_nbpmetadatasend_baseurl',
 
 		// This is the friendly title for the config, which will be displayed
-		'Basis-URL',
+		get_string('baseurl', 'local_nbpmetadatasend'),
 
 		// This is helper text for this config field
-		'Basis-URL Basisadresse für alle Anfragen an den Push-Connector',
+		get_string('baseurldesc', 'local_nbpmetadatasend'),
 
 		// This is the default value
 		'',
@@ -70,10 +70,10 @@ if ($hassiteconfig) {
 		'local_nbpmetadatasend_sourceSlug',
 
 		// This is the friendly title for the config, which will be displayed
-		'Source Slug',
+		get_string('sourceslug', 'local_nbpmetadatasend'),
 
 		// This is helper text for this config field
-		'Menschenlesbarer Identifikator Ihrer Datenquelle, für welche Sie Lernangebote hochladen möchten.',
+		get_string('sourceslugdesc', 'local_nbpmetadatasend'),
 
 		// This is the default value
 		'',
@@ -90,10 +90,10 @@ if ($hassiteconfig) {
 		'local_nbpmetadatasend_clientId',
 
 		// This is the friendly title for the config, which will be displayed
-		'Client Id',
+		get_string('clientid', 'local_nbpmetadatasend'),
 
 		// This is helper text for this config field
-		'Client Id für die Connection zum Backbone',
+		get_string('clientiddesc', 'local_nbpmetadatasend'),
 
 		// This is the default value
 		'',
@@ -110,10 +110,10 @@ if ($hassiteconfig) {
 		'local_nbpmetadatasend_clientSecret',
 
 		// This is the friendly title for the config, which will be displayed
-		'Client Secret',
+		get_string('clientsecret', 'local_nbpmetadatasend'),
 
 		// This is helper text for this config field
-		'Client Secret für die Connection zum Backbone',
+		get_string('clientsecretdesc', 'local_nbpmetadatasend'),
 
 		// This is the default value
 		'',

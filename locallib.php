@@ -566,7 +566,7 @@ function get_metadata_from_slug() {
     ob_start(); // Start output buffering to capture echo statements
 
     $slug = get_source_slug();
-    echo "Starting getdata process from slug: " . $slug . "\n";
+    echo "Starting getdata process from slug " . $slug . "... \n";
 
     $baseurl = get_baseurl();
     $clientid = get_clientid();
@@ -612,7 +612,7 @@ function get_metadata_from_slug() {
     echo "HTTP Status Code: " . $http_status . "\n";
     echo "Response from NBP:\n";
     echo $response . "\n";
-    echo "Getdata process completed successfully.\n";
+    //echo "Getdata process completed successfully.\n";
 
     return ob_get_clean(); // Return all captured output
 }
@@ -620,6 +620,8 @@ function get_metadata_from_slug() {
 
 function put_metadata_to_slug($inputvalue_putdata) {
     ob_start(); // Start output buffering to capture echo statements
+
+    echo "Starting put data do Datenraum process...\n";
 
     require_once(__DIR__ . '/../../config.php');
     global $CFG, $DB;
@@ -676,8 +678,8 @@ function put_metadata_to_slug($inputvalue_putdata) {
     foreach ($filteredCourses as $result) {
 
         $json_data = json_encode($result);
-
-        echo $json_data;
+        echo "Sending JSON data:\n";
+        echo $json_data . "\n";
         $url = $baseurl . '/push-connector/api/moochub/' . $sourceslug;
         $ch = curl_init($url);
 
@@ -726,10 +728,8 @@ function delete_metadata_to_slug($inputvalue_deletedata) {
 
     echo "Starting delete process...\n";
     $baseurl = get_baseurl();
-    echo "Base URL: " . $baseurl . "\n";
 
     $sourceslug = get_source_slug();
-    echo "Source slug: " . $sourceslug . "\n";
 
     $clientid = get_clientid();
     $clientsecret = get_clientsecret();
@@ -822,6 +822,5 @@ function delete_metadata_to_slug($inputvalue_deletedata) {
         }
     }
 
-    echo "Delete process completed.\n";
     return ob_get_clean(); // Return all captured output
 }
