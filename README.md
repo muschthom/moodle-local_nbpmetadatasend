@@ -12,7 +12,7 @@
 
 # Installation
 
-The plugin needs to be installed inside the "local" folder and needs to be named ildmeta.
+The plugin needs to be installed inside the "local" folder and needs to be named nbpmetadatasend
 
 ```bash
 git clone https://github.com/muschthom/moodle-local_nbpmetadatasend.git nbpmetadatasend
