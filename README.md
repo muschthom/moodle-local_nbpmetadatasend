@@ -10,6 +10,15 @@
  * Client Secret (provided by Datenraum)
 
 
+#Installation
+
+The plugin needs to be installed inside the "local" folder and needs to be named ildmeta.
+
+```bash
+git clone https://github.com/muschthom/moodle-local_nbpmetadatasend.git nbpmetadatasend
+```
+
+
 # Manage Metadata
 The link to this page is /local/nbpmetadatasend/manage.php 
 
